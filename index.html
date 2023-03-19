@@ -15,8 +15,7 @@
 </head>
 
 <body>
-    <!-- TESTE  -->
-    <!-- Teste Daniel -->
+
     <div class="geral">
         <div class="formulario">
             <form action="post">
@@ -210,6 +209,259 @@
             </form>
             <script src="./script.js"></script>
         </div>
+    </div>
+
+    <!-- PARTE DANIEL -->
+
+    <div class="content hide">
+
+
+        <!-- CABEÇALHO -->
+        <h1>
+            Fazer uma Denúncia
+        </h1>
+        <p>
+            Isso é um canal bla bla bla
+        </p>
+        <!-- FIM DO CABEÇALHO -->
+
+
+        <!-- INÍCIO DO FORMULÁRIO -->
+        <form action="post">
+
+
+            <!-- PERGUNTA DA IDENTIFICAÇÃO -->
+            <div class="identify-question">
+                <h2>
+                    Você gostaria de se identificar?
+                </h2>
+
+                <div class="format-identify-question">
+                    <button onclick="inputshow()">
+                        <input class="radio" type="radio" name="theradio" id="radio1">
+                    </button>
+                    <label for="radio1">
+                        Sim
+                    </label>
+                </div>
+
+                <div class="format-identify-question">
+                    <button onclick="inputshow()">
+                        <input class="radio" type="radio" name="theradio" id="radio2" checked>
+                    </button>
+                    <label for="radio2">
+                        Não
+                    </label>
+                </div>
+
+            </div>
+            <!-- FIM DA PERGUNTA DE IDENTIFICAÇÃO -->
+
+
+            <!-- IDENTIFICAÇÃO -->
+            <div class="identify-box">
+
+                <div>
+                    <h3>
+                        Nome Completo
+                    </h3>
+
+                    <input id="name" type="text" name="nome">
+                </div>
+
+                <div>
+                    <h3>
+                        E-mail
+                    </h3>
+
+                    <input id="email" type="email" name="Email">
+                </div>
+
+            </div>
+            <!-- FIM DA IDENTIFICAÇÃO -->
+
+
+            <p><strong>Qual sua relação com a Suprema</strong></p>
+            <select name="selecao1" id="">
+                <option value="selecione">[selecione]</option>
+                <option value="colaboradar">Sou colaborador</option>
+                <option value="ex-colaborador">Sou ex-colaborador</option>
+                <option value="cliente">Sou cliente</option>
+                <option value="fornecedor">Sou fornecedor</option>
+                <option value="parceiro">Sou parceiro</option>
+                <option value="prestador-servico">Sou prestador de serviços</option>
+                <option value="outros">Outros</option>
+            </select>
+            <div class="input1">
+                <p><strong>Por favor, especifique:</strong></p>
+                <input class="edit-input" id="especifique" type="text">
+            </div>
+            <p><strong>* Qual o tipo de denúncia melhor se enquadra ao fato que voce está registrando?</strong></p>
+            <select name="selecao2" id="" required>
+                <option value="selecione">[selecione]</option>
+                <option value="duvidas">Dúvida ou problema com produtos da Suprema</option>
+                <option value="criticas">Críticas, elogios ou sugestões sobre a Suprema</option>
+                <option value="desvios">Desvios comportamentais</option>
+                <option value="desvios-fc">Desvios financeiros ou contábeis</option>
+                <option value="descumprimento">Descumprimento de políticas ou procedimentos</option>
+                <option value="violacao">Violação aos direito trabalhista / humanos / ambientais</option>
+            </select>
+            <div class="contato">
+                <p>Olá!
+                    <br>
+                    Para situações como essa você pode entrar em contato com a Suprema através do nosso atendimento:
+                    <br>
+                    Por telefone: 0800 000 000
+                    <br>
+                    Por email: meajuda@suprema.com
+                    <br>
+                    Ou pelo App Suprema
+                    <br>
+                    Atenciosamente
+                    <br>
+                    Time da Suprema
+                </p>
+            </div>
+
+            <div class="input2">
+                <p class="p1"><strong>Por favor especifique qual o tipo de denúncia melhor se enquadra ao fato que
+                        você
+                        esta
+                        registrando?</strong></p>
+                <select name="desvio-comportamentais" id="">
+                    <option value="selecione">[selecione]</option>
+                    <option value="ag-fisica">Agressão Fisica</option>
+                    <option value="as-moral">Assédio Moral</option>
+                    <option value="as-sexual">Assédio Sexual</option>
+                    <option value="politica-religiosa">Atividades Políticas / Religiosas</option>
+                    <option value="favoritismo">Favoritismo</option>
+                    <option value="preconceito">Preconceito / Discriminação</option>
+                    <option value="retaliacao">Retaliação</option>
+                    <option value="alcool-drogas">Uso Indevido De Alcool / Drogas</option>
+                    <option value="midia-marca">Uso Indevido De Mídia Sociais / Marca</option>
+                    <option value="outros">Outros Desvios Comportamentais</option>
+                </select>
+            </div>
+            <div class="input3">
+                <p><strong>Por favor, especifique:</strong></p>
+                <input class="edit-input" id="especifique" type="text">
+            </div>
+
+            <div class="input4">
+                <p><strong>Por favor especifique qual o tipo de denúncia melhor se enquadra ao fato que você esta
+                        registrando?</strong></p>
+                <select name="financeiro" id="">
+                    <option value="selecione">[selecione]</option>
+                    <option value="suborno">Corrupção / Suborno</option>
+                    <option value="fraude">Desvio Financeiro / Fraude Contábil</option>
+                    <option value="lavagem">Lavagem De Dinheiro</option>
+                </select>
+            </div>
+
+            <div class="input5">
+                <p><strong>Por favor especifique qual o tipo de denúncia melhor se enquadra ao fato que você esta
+                        registrando?</strong></p>
+                <select name="descumprimento" id="">
+                    <option value="selecione">[selecione]</option>
+                    <option value="conflito">Conflito De Interesses</option>
+                    <option value="interna">Fraude Interna</option>
+                    <option value="roubo">Roubo / Destruição De Bens</option>
+                    <option value="vazamento">Vazamento / Uso Indevido De Informações</option>
+                    <option value="outros">Outros Desvios Não Comportametais</option>
+                </select>
+            </div>
+
+            <div class="input6">
+                <p><strong>Por favor, especifique:</strong></p>
+                <input class="edit-input" id="especifique" type="text">
+            </div>
+
+            <div class="input7">
+                <p><strong>Por favor especifique qual o tipo de denúncia melhor se enquadra ao fato que você esta
+                        registrando?</strong></p>
+                <select name="direitos" id="">
+                    <option value="selecione">[selecione]</option>
+                    <option value="ambiental">Violação Ambieltal</option>
+                    <option value="humano">Violação Aos Direitos Humanos</option>
+                    <option value="trabalhistas">Violação Aos Direitos Trabalhistas</option>
+                </select>
+            </div>
+
+            <div class="input8">
+                <p><strong>Como tomou conhecimento deste fato/trangressão?</strong></p>
+                <select name="fato" id="">
+                    <option value="selecione">[selecione]</option>
+                    <option value="comigo">Aconteceu comigo</option>
+                    <option value="observei">Eu a observei</option>
+                    <option value="ouvi">Ouvi falar</option>
+                    <option value="um colega">Um colega de trabalho me contou</option>
+                    <option value="me-contou">O denunciado me contou</option>
+                    <option value="por-acaso">Ouvi por acaso</option>
+                    <option value="encontrei">Encontrei um documento ou arquivo acidentalmente</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="input9">
+                <p><strong>Por favor, especifique:</strong></p>
+                <input class="edit-input" id="especifique" type="text">
+            </div>
+
+            <div class="input10">
+                <p><strong>Quem você quer denunciar?</strong></p>
+                <p>Indique o(s) nome(s) e email(s) da(s) pessoa(s) que está(ão) que realizaram o fato denunciado,
+                    com a
+                    informação de Squad/Chapter se possível.</p>
+                <input class="edit-input" type="text" name="denuncia">
+
+                <p><strong>* O que você quer denunciar?</strong></p>
+                <p>Descreva o mais detalhadamente possível o que aconteceu, indicando data(s), o(s) nome(s) da(s)
+                    pessoa(s)
+                    que está(ão) envolvida(s), bem como quando e onde o fato ocorreu e se ainda continua ocorrendo.
+                </p>
+                <textarea name="mensagem" id="" required></textarea>
+
+                <p><strong>Existem testemunhas? Em caso positivo, indique-as.</strong></p>
+                <input class="edit-input" type="text" name="testemunha">
+
+                <p><strong>Existem vítimas? Em caso positivo, indique-as.</strong></p>
+                <input class="edit-input" type="text" name="vitimas">
+
+                <p><strong>Você sabe se existem evidências sobre o fato? Em caso positivo, indique-as.</strong></p>
+                <br>
+                <p>Quais e em que lugar(es) podem ser encontradas evidências sobre o fato denunciado? Existem
+                    documentos
+                    que
+                    comprovam esse fato?</p>
+                <br>
+                <p>Em caso positivo, onde podem ser encontrados? Especifique da forma mais detalhada possível.</p>
+                <br>
+                <p>Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para você.</p>
+                <input class="edit-input" type="text" name="evidencias">
+
+                <p><strong>Caso você possua evidências (lugares, documentos, imagens, vídeos, sistemas, placas de
+                        veículos,
+                        etc.), anexe-as na próxima página.</strong></p>
+                <p><strong>Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para
+                        você.</strong></p>
+
+                <h1 class="leia">Leia com Atenção</h1>
+                <p>Ao preencher o formulário, você concorda que a Contato Seguro salve e envie as informações
+                    prestadas
+                    à
+                    empresa/organização contratante de seus
+                    <br> serviços, possibilitando que medidas sejam tomadas a partir da
+                    análise do conteúdo de suas respostas. Para mais informações sobre a proteção de dados
+                    <br> e os direitos do
+                    usuário, acesse <a href="">este link</a>, ou a <a href="">Politica de Privacidade</a>
+                </p>
+                <input class="edit-input" type="submit">
+            </div>
+        </form>
+        <!-- FIM DO FORMULÁRIO -->
+
+        <script src="./script.js"></script>
+
     </div>
 
 </body>
