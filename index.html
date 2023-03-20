@@ -25,7 +25,7 @@
                     <label for="radio1">Sim</label>
                 </div>
                 <div class="form-group">
-                    <input class="radio" type="radio" name="theradio" id="radio2" checked>
+                    <button onclick="inputshow()"><input class="radio" type="radio" name="theradio" id="radio2" checked></button>
                     <label for="radio2">Nao</label>
                 </div>
                 <div class="nome-email">
@@ -35,7 +35,7 @@
                     <input class="edit-input" id="email" type="email" name="Email">
                 </div>
                 <p><strong>Qual sua relação com a Suprema</strong></p>
-                <select name="selecao1" id="">
+                <select class="select1" onchange="aparecer()" name="selecao1" id="relacao-sup">
                     <option value="selecione">[selecione]</option>
                     <option value="colaboradar">Sou colaborador</option>
                     <option value="ex-colaborador">Sou ex-colaborador</option>
