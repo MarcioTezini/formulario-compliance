@@ -15,505 +15,135 @@
 </head>
 
 <body>
-
-    <div class="geral">
-        <div class="formulario">
-            <form action="post">
-
-
-                <!-- Indentificação Sim ou Não -->
-
-                <p class="p1">
-                    <strong>
-                        Você gostaria de se identificar?
-                    </strong>
-                </p>
-
-                <div class="form-group">
-                    <button onclick="inputshow()">
-                        <input class="radio" type="radio" name="theradio" id="radio1">
-                    </button>
-                    <label for="radio1">Sim</label>
-                </div>
-
-                <div class="form-group">
-                    <button onclick="inputshow()">
-                        <input class="radio" type="radio" name="theradio" id="radio2" checked>
-                    </button>
-                    <label for="radio2">Nao</label>
-                </div>
-
-                <!-- Fim Indentificação Sim ou Não -->
-
-                <!-- Campo de seleção Nome e Email -->
-
-                <div class="nome-email">
-                    <p>
-                        <strong>
-                            Nome Completo
-                        </strong>
-                    </p>
-
-                    <input class="edit-input" id="name" type="text" name="nome">
-
-                    <p>
-                        <strong>
-                            E-mail
-                        </strong>
-                    </p>
-
-                    <input class="edit-input" id="email" type="email" name="Email">
-                </div>
-
-                <!-- Fim do Campo de marcação Nome e Email -->
-
-
-                <!-- Campo de seleção de relação  -->
-
-                <p>
-                    <strong>
-                        Qual sua relação com a Suprema
-                    </strong>
-                </p>
-
-                <select class="select1" onchange="aparecer()" name="selecao1" id="relacao-sup">
-                    <option value="selecione">[selecione]</option>
-                    <option value="colaboradar">Sou colaborador</option>
-                    <option value="ex-colaborador">Sou ex-colaborador</option>
-                    <option value="cliente">Sou cliente</option>
-                    <option value="fornecedor">Sou fornecedor</option>
-                    <option value="parceiro">Sou parceiro</option>
-                    <option value="prestador-servico">Sou prestador de serviços</option>
-                    <option value="outros">Outros</option>
-                </select>
-
-                <!-- Fim Campo de seleção de relação  -->
-
-
-                <!-- Campo de marcação especifique da option (outros) -->
-
-                <div class="input1">
-                    <p>
-                        <strong>
-                            Por favor, especifique:
-                        </strong>
-                    </p>
-                    <input class="edit-input" id="especifique" type="text">
-                </div>
-
-                <!-- Fim Campo de marcação especifique da option (outros) -->
-
-
-                <!-- Campo de seleção de tipo de denuncia -->
-
-                <p>
-                    <strong>
-                        * Qual o tipo de denúncia melhor se enquadra ao fato que voce está registrando?
-                    </strong>
-                </p>
-                <select onchange="aparecer1()"  class="select2" name="selecao2" id="tipo-denuncia" required>
-                    <option value="selecione">[selecione]</option>
-                    <option value="duvidas">Dúvida ou problema com produtos da Suprema</option>
-                    <option value="criticas">Críticas, elogios ou sugestões sobre a Suprema</option>
-                    <option value="desvios">Desvios comportamentais</option>
-                    <option value="desvios-fc">Desvios financeiros ou contábeis</option>
-                    <option value="descumprimento">Descumprimento de políticas ou procedimentos</option>
-                    <option value="violacao">Violação aos direito trabalhista / humanos / ambientais</option>
-                </select>
-
-                <!-- Fim Campo de seleção de tipo de denuncia -->
-
-
-                <!-- Campo de informação sobre contato da opçao duvidas e criticas (value duvidas)(value criticas) -->
-
-                <div class="contato">
-                    <p>Olá!
-                        <br>
-                        Para situações como essa você pode entrar em contato com a Suprema através do nosso atendimento:
-                        <br>
-                        Por telefone: 0800 000 000
-                        <br>
-                        Por email: meajuda@suprema.com
-                        <br>
-                        Ou pelo App Suprema
-                        <br>
-                        Atenciosamente
-                        <br>
-                        Time da Suprema
-                    </p>
-                </div>
-
-                <div class="contato1">
-                    <p>Olá!
-                        <br>
-                        Para situações como essa você pode entrar em contato com a Suprema através do nosso atendimento:
-                        <br>
-                        Por telefone: 0800 000 000
-                        <br>
-                        Por email: meajuda@suprema.com
-                        <br>
-                        Ou pelo App Suprema
-                        <br>
-                        Atenciosamente
-                        <br>
-                        Time da Suprema
-                    </p>
-                </div>
-
-                <!-- Fim Campo de informação sobre contato da opçao duvidas e criticas (value duvidas)(value criticas) -->
-
-
-
-                <!-- Campo de especificação de tipo de denuncia do (value desvios) -->
-
-                <div class="input2">
-                    <p class="p1">
-                        <strong>
-                            Por favor especifique qual o tipo de denúncia melhor
-                            se enquadra ao fato que você esta registrando?
-                        </strong>
-                    </p>
-                    <select onchange="aparecer2()" name="desvio-comportamentais" id="desvio-cop">
-                        <option value="selecione">[selecione]</option>
-                        <option value="ag-fisica">Agressão Fisica</option>
-                        <option value="as-moral">Assédio Moral</option>
-                        <option value="as-sexual">Assédio Sexual</option>
-                        <option value="politica-religiosa">Atividades Políticas / Religiosas</option>
-                        <option value="favoritismo">Favoritismo</option>
-                        <option value="preconceito">Preconceito / Discriminação</option>
-                        <option value="retaliacao">Retaliação</option>
-                        <option value="alcool-drogas">Uso Indevido De Alcool / Drogas</option>
-                        <option value="midia-marca">Uso Indevido De Mídia Sociais / Marca</option>
-                        <option value="outros-desvios">Outros Desvios Comportamentais</option>
-                    </select>
-                </div>
-
-                <!--Fim Campo de especificação de tipo de denuncia do (value desvios) -->
-
-
-                <!-- campo de especificação do (value outros-desvios) -->
-
-                <div class="input3">
-                    <p>
-                        <strong>
-                            Por favor, especifique:
-                        </strong>
-                    </p>
-                    <input class="edit-input" id="especifique" type="text">
-                </div>
-
-                <!-- Fim campo de especificação do (value outros-desvios) -->
-
-
-                <!-- campo de seleção de denuncia do (value desvios-fc) -->
-
-                <div class="input4">
-                    <p>
-                        <strong>
-                            Por favor especifique qual o tipo de denúncia melhor se enquadra ao fato que você esta
-                            registrando?
-                        </strong>
-                    </p>
-                    <select name="financeiro" id="">
-                        <option value="selecione">[selecione]</option>
-                        <option value="suborno">Corrupção / Suborno</option>
-                        <option value="fraude">Desvio Financeiro / Fraude Contábil</option>
-                        <option value="lavagem">Lavagem De Dinheiro</option>
-                    </select>
-                </div>
-
-                <!-- Fim campo de seleção do (value desvios-fc) -->
-
-
-
-                <!-- campo de seleção de denuncia do (value descumprimento) -->
-
-                <div class="input5">
-                    <p>
-                        <strong>
-                            Por favor especifique qual o tipo de denúncia melhor se enquadra ao fato que você esta
-                            registrando?
-                        </strong>
-                    </p>
-
-                    <select onchange="aparecer3()" name="descumprimento" id="descum">
-                        <option value="selecione">[selecione]</option>
-                        <option value="conflito">Conflito De Interesses</option>
-                        <option value="interna">Fraude Interna</option>
-                        <option value="roubo">Roubo / Destruição De Bens</option>
-                        <option value="vazamento">Vazamento / Uso Indevido De Informações</option>
-                        <option value="outros-dv-cp">Outros Desvios Não Comportametais</option>
-                    </select>
-                </div>
-
-                <!-- Fim campo de seleção de denuncia do (value descumprimento) -->
-
-
-                <!-- campo de especificação do (value outros-dv-cp) -->
-
-                <div class="input6">
-                    <p>
-                        <strong>
-                            Por favor, especifique:
-                        </strong>
-                    </p>
-                    <input class="edit-input" id="especifique" type="text">
-                </div>
-
-                <!-- Fim campo de especificação do (value outros-dv-cp) -->
-
-
-                <!-- campo de seleção de denuncia do (value violacao) -->
-
-                <div class="input7">
-                    <p><strong>Por favor especifique qual o tipo de denúncia melhor se enquadra ao fato que você esta
-                            registrando?</strong></p>
-                    <select name="direitos" id="">
-                        <option value="selecione">[selecione]</option>
-                        <option value="ambiental">Violação Ambieltal</option>
-                        <option value="humano">Violação Aos Direitos Humanos</option>
-                        <option value="trabalhistas">Violação Aos Direitos Trabalhistas</option>
-                    </select>
-                </div>
-
-                <!--Fim campo de seleção de denuncia do (value violacao) -->
-
-
-                <!-- campo de seleção do fato da denuncia -->
-
-                <div class="input8">
-                    <p>
-                        <strong>
-                            Como tomou conhecimento deste fato/trangressão?
-                        </strong>
-                    </p>
-                    <select name="fatos" id="">
-                        <option value="selecione">[selecione]</option>
-                        <option value="comigo">Aconteceu comigo</option>
-                        <option value="observei">Eu a observei</option>
-                        <option value="ouvi">Ouvi falar</option>
-                        <option value="um colega">Um colega de trabalho me contou</option>
-                        <option value="me-contou">O denunciado me contou</option>
-                        <option value="por-acaso">Ouvi por acaso</option>
-                        <option value="encontrei">Encontrei um documento ou arquivo acidentalmente</option>
-                        <option value="outros-fatos">Outros</option>
-                    </select>
-                </div>
-
-                <!-- Fim campo de seleção do fato da denuncia -->
-
-
-                <!-- campo de especificação do (value outros-fatos) -->
-
-                <div class="input9">
-                    <p>
-                        <strong>
-                            Por favor, especifique:
-                        </strong>
-                    </p>
-                    <input class="edit-input" id="especifique" type="text">
-                </div>
-
-                <!-- Fim campo de especificação do (value outros-fatos) -->
-
-
-                <!-- campo de especificação da pessoa ou coisa denunciada -->
-
-                <div class="input10">
-                    <p>
-                        <strong>
-                            Quem você quer denunciar?
-                        </strong>
-                    </p>
-                    <p>Indique o(s) nome(s) e email(s) da(s) pessoa(s) que está(ão) que realizaram o fato denunciado,
-                        com a
-                        informação de Squad/Chapter se possível.</p>
-                    <input class="edit-input" type="text" name="denuncia">
-
-                    <p>
-                        <strong>
-                            * O que você quer denunciar?
-                        </strong>
-                    </p>
-                    <p>Descreva o mais detalhadamente possível o que aconteceu, indicando data(s), o(s) nome(s) da(s)
-                        pessoa(s)
-                        que está(ão) envolvida(s), bem como quando e onde o fato ocorreu e se ainda continua ocorrendo.
-                    </p>
-                    <textarea name="mensagem" id="" cols="70" rows="15" required></textarea>
-
-                    <!-- Fim campo de especificação da pessoa ou coisa denunciada -->
-
-
-                    <!-- campo de especificação de testemunhas -->
-                    <p>
-                        <strong>
-                            Existem testemunhas? Em caso positivo, indique-as.
-                        </strong>
-                    </p>
-                    <input class="edit-input" type="text" name="testemunha">
-
-                    <!-- Fim campo de especificação de testemunhas -->
-
-
-                    <!-- campo de especificação de vitimas -->
-
-                    <p>
-                        <strong>
-                            Existem vítimas? Em caso positivo, indique-as.
-                        </strong>
-                    </p>
-                    <input class="edit-input" type="text" name="vitimas">
-
-                    <!-- Fim campo de especificação de vitimas -->
-
-
-                    <!-- campo de especificação de evidencias -->
-
-                    <p>
-                        <strong>
-                            Você sabe se existem evidências sobre o fato? Em caso positivo, indique-as.
-                        </strong>
-                    </p>
-                    <br>
-                    <p>Quais e em que lugar(es) podem ser encontradas evidências sobre o fato denunciado? Existem
-                        documentos
-                        que
-                        comprovam esse fato?</p>
-                    <br>
-                    <p>Em caso positivo, onde podem ser encontrados? Especifique da forma mais detalhada possível.</p>
-                    <br>
-                    <p>Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para você.</p>
-
-                    <input class="edit-input" type="text" name="evidencias">
-
-                    <!-- Fim campo de especificação de evidencias -->
-
-                    <p>
-                        <strong>
-                            Caso você possua evidências (lugares, documentos, imagens, vídeos, sistemas, placas de
-                            veículos,
-                            etc.), anexe-as na próxima página.
-                        </strong>
-                    </p>
-
-                    <p>
-                        <strong>
-                            Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para
-                            você.
-                        </strong>
-                    </p>
-
-                    <h1 class="leia">Leia com Atenção</h1>
-                    <p>Ao preencher o formulário, você concorda que a Contato Seguro salve e envie as informações
-                        prestadas
-                        à
-                        empresa/organização contratante de seus
-                        <br> serviços, possibilitando que medidas sejam tomadas a partir da
-                        análise do conteúdo de suas respostas. Para mais informações sobre a proteção de dados
-                        <br> e os direitos do
-                        usuário, acesse <a href="">este link</a>, ou a <a href="">Politica de Privacidade</a>
-                    </p>
-                    <input class="edit-input" type="submit">
-                </div>
-            </form>
-            <script src="./script.js"></script>
-        </div>
-    </div>
-
-    <!-- PARTE DANIEL -->
-
-    <!-- <div class="content hide"> -->
-
-
-    <!-- CABEÇALHO 
-        <h1>
-            Fazer uma Denúncia
-        </h1>
-        <p>
-            Isso é um canal bla bla bla
-        </p>
-         FIM DO CABEÇALHO -->
-
-
-    <!-- INÍCIO DO FORMULÁRIO 
+    <main class="geral">
         <form action="post">
+            <!-- Indentificação Sim ou Não -->
 
+            <div class="identificar">
 
-            
-            <div class="identify-question">
                 <h2>
                     Você gostaria de se identificar?
                 </h2>
 
-                <div class="format-identify-question">
-                    <button onclick="inputshow()">
-                        <input class="radio" type="radio" name="theradio" id="radio1">
-                    </button>
-                    <label for="radio1">
-                        Sim
-                    </label>
+
+                <div class="form-group">
+                    <input onclick="inputshow()" class="radio" type="radio" name="theradio" id="radio1">
+                    <label for="radio1">Sim</label>
                 </div>
 
-                <div class="format-identify-question">
-                    <button onclick="inputshow()">
-                        <input class="radio" type="radio" name="theradio" id="radio2" checked>
-                    </button>
-                    <label for="radio2">
-                        Não
-                    </label>
+                <div class="form-group">
+                    <input onclick="inputshow()" class="radio" type="radio" name="theradio" id="radio2" checked>
+                    <label for="radio2">Nao</label>
                 </div>
-
-            </div>
-            
-
-
-             IDENTIFICAÇÃO
-            <div class="identify-box">
-
-                <div>
-                    <h3>
-                        Nome Completo
-                    </h3>
-
-                    <input id="name" type="text" name="nome">
-                </div>
-
-                <div>
-                    <h3>
-                        E-mail
-                    </h3>
-
-                    <input id="email" type="email" name="Email">
-                </div>
-
             </div>
 
+            <!-- Fim Indentificação Sim ou Não -->
 
-            <p><strong>Qual sua relação com a Suprema</strong></p>
-            <select name="selecao1" id="">
-                <option value="selecione">[selecione]</option>
-                <option value="colaboradar">Sou colaborador</option>
-                <option value="ex-colaborador">Sou ex-colaborador</option>
-                <option value="cliente">Sou cliente</option>
-                <option value="fornecedor">Sou fornecedor</option>
-                <option value="parceiro">Sou parceiro</option>
-                <option value="prestador-servico">Sou prestador de serviços</option>
-                <option value="outros">Outros</option>
+            <!-- Campo de seleção Nome e Email -->
+
+            <div class="nome-email">
+                <h2>
+                    Nome Completo
+                </h2>
+
+                <input class="edit-input" id="name" type="text" name="nome">
+
+                <h2>
+                    E-mail
+                </h2>
+
+                <input class="edit-input" id="email" type="email" name="Email">
+            </div>
+
+            <!-- Fim do Campo de marcação Nome e Email -->
+
+
+            <!-- Campo de seleção de relação  -->
+
+            <h2>
+                Qual sua relação com a Suprema
+            </h2>
+
+            <select class="select1" onchange="aparecer()" name="selecao1" id="relacao-sup">
+                <option value="selecione">
+                    [selecione]
+                </option>
+                <option value="colaboradar">
+                    Sou colaborador
+                </option>
+                <option value="ex-colaborador">
+                    Sou ex-colaborador
+                </option>
+                <option value="cliente">
+                    Sou cliente
+                </option>
+                <option value="fornecedor">
+                    Sou fornecedor
+                </option>
+                <option value="parceiro">
+                    Sou parceiro
+                </option>
+                <option value="prestador-servico">
+                    Sou prestador de serviços
+                </option>
+                <option value="outros">
+                    Outros
+                </option>
             </select>
+
+            <!-- Fim Campo de seleção de relação  -->
+
+
+            <!-- Campo de marcação especifique da option (outros) -->
+
             <div class="input1">
-                <p><strong>Por favor, especifique:</strong></p>
-                <input class="edit-input" id="especifique" type="text"> -->
-    <!-- </div>
-            <p><strong>* Qual o tipo de denúncia melhor se enquadra ao fato que voce está registrando?</strong></p>
-            <select name="selecao2" id="" required>
-                <option value="selecione">[selecione]</option>
-                <option value="duvidas">Dúvida ou problema com produtos da Suprema</option>
-                <option value="criticas">Críticas, elogios ou sugestões sobre a Suprema</option>
-                <option value="desvios">Desvios comportamentais</option>
-                <option value="desvios-fc">Desvios financeiros ou contábeis</option>
-                <option value="descumprimento">Descumprimento de políticas ou procedimentos</option>
-                <option value="violacao">Violação aos direito trabalhista / humanos / ambientais</option>
+
+                <h2>
+                    Por favor, especifique:
+                </h2>
+
+                <input class="edit-input" id="especifique" type="text">
+            </div>
+
+            <!-- Fim Campo de marcação especifique da option (outros) -->
+
+
+            <!-- Campo de seleção de tipo de denuncia -->
+
+
+            <h2>
+                * Qual o tipo de denúncia melhor se enquadra ao fato que voce está registrando?
+            </h2>
+
+            <select onchange="aparecer1()" class="select2" name="selecao2" id="tipo-denuncia" required>
+                <option value="selecione">
+                    [selecione]
+                </option>
+                <option value="duvidas">
+                    Dúvida ou problema com produtos da Suprema
+                </option>
+                <option value="criticas">
+                    Críticas, elogios ou sugestões sobre a Suprema
+                </option>
+                <option value="desvios">
+                    Desvios comportamentais
+                </option>
+                <option value="desvios-fc">
+                    Desvios financeiros ou contábeis
+                </option>
+                <option value="descumprimento">
+                    Descumprimento de políticas ou procedimentos
+                </option>
+                <option value="violacao">
+                    Violação aos direito trabalhista / humanos / ambientais
+                </option>
             </select>
+
+            <!-- Fim Campo de seleção de tipo de denuncia -->
+
+
+            <!-- Campo de informação sobre contato da opçao duvidas e criticas (value duvidas)(value criticas) -->
+
             <div class="contato">
                 <p>Olá!
                     <br>
@@ -531,130 +161,854 @@
                 </p>
             </div>
 
+            <div class="contato1">
+                <p>Olá!
+                    <br>
+                    Para situações como essa você pode entrar em contato com a Suprema através do nosso atendimento:
+                    <br>
+                    Por telefone: 0800 000 000
+                    <br>
+                    Por email: meajuda@suprema.com
+                    <br>
+                    Ou pelo App Suprema
+                    <br>
+                    Atenciosamente
+                    <br>
+                    Time da Suprema
+                </p>
+            </div>
+
+            <!-- Fim Campo de informação sobre contato da opçao duvidas e criticas (value duvidas)(value criticas) -->
+
+
+
+            <!-- Campo de especificação de tipo de denuncia do (value desvios) -->
+
             <div class="input2">
-                <p class="p1"><strong>Por favor especifique qual o tipo de denúncia melhor se enquadra ao fato que
-                        você
-                        esta
-                        registrando?</strong></p>
-                <select name="desvio-comportamentais" id="">
-                    <option value="selecione">[selecione]</option>
-                    <option value="ag-fisica">Agressão Fisica</option>
-                    <option value="as-moral">Assédio Moral</option>
-                    <option value="as-sexual">Assédio Sexual</option>
-                    <option value="politica-religiosa">Atividades Políticas / Religiosas</option>
-                    <option value="favoritismo">Favoritismo</option>
-                    <option value="preconceito">Preconceito / Discriminação</option>
-                    <option value="retaliacao">Retaliação</option>
-                    <option value="alcool-drogas">Uso Indevido De Alcool / Drogas</option>
-                    <option value="midia-marca">Uso Indevido De Mídia Sociais / Marca</option>
-                    <option value="outros">Outros Desvios Comportamentais</option>
+
+                <h2>
+                    Por favor especifique qual o tipo de denúncia melhor
+                    se enquadra ao fato que você esta registrando?
+                </h2>
+
+                <select onchange="aparecer2()" name="desvio-comportamentais" id="desvio-cop">
+                    <option value="selecione">
+                        [selecione]
+                    </option>
+                    <option value="ag-fisica">
+                        Agressão Fisica
+                    </option>
+                    <option value="as-moral">
+                        Assédio Moral
+                    </option>
+                    <option value="as-sexual">
+                        Assédio Sexual
+                    </option>
+                    <option value="politica-religiosa">
+                        Atividades Políticas / Religiosas
+                    </option>
+                    <option value="favoritismo">
+                        Favoritismo
+                    </option>
+                    <option value="preconceito">
+                        Preconceito / Discriminação
+                    </option>
+                    <option value="retaliacao">
+                        Retaliação
+                    </option>
+                    <option value="alcool-drogas">
+                        Uso Indevido De Alcool / Drogas
+                    </option>
+                    <option value="midia-marca">
+                        Uso Indevido De Mídia Sociais / Marca
+                    </option>
+                    <option value="outros-desvios">
+                        Outros Desvios Comportamentais
+                    </option>
                 </select>
-            </div> -->
-    <!-- <div class="input3">
-                <p><strong>Por favor, especifique:</strong></p>
+            </div>
+
+            <!--Fim Campo de especificação de tipo de denuncia do (value desvios) -->
+
+
+            <!-- campo de especificação do (value outros-desvios) -->
+
+            <div class="input3">
+
+                <h2>
+                    Por favor, especifique:
+                </h2>
+
                 <input class="edit-input" id="especifique" type="text">
             </div>
+
+            <!-- Fim campo de especificação do (value outros-desvios) -->
+
+
+            <!-- campo de seleção de denuncia do (value desvios-fc) -->
 
             <div class="input4">
-                <p><strong>Por favor especifique qual o tipo de denúncia melhor se enquadra ao fato que você esta
-                        registrando?</strong></p>
+
+                <h2>
+                    Por favor especifique qual o tipo de denúncia melhor se enquadra ao fato que você esta
+                    registrando?
+                </h2>
+
                 <select name="financeiro" id="">
-                    <option value="selecione">[selecione]</option>
-                    <option value="suborno">Corrupção / Suborno</option>
-                    <option value="fraude">Desvio Financeiro / Fraude Contábil</option>
-                    <option value="lavagem">Lavagem De Dinheiro</option>
+                    <option value="selecione">
+                        [selecione]
+                    </option>
+                    <option value="suborno">
+                        Corrupção / Suborno
+                    </option>
+                    <option value="fraude">
+                        Desvio Financeiro / Fraude Contábil
+                    </option>
+                    <option value="lavagem">
+                        Lavagem De Dinheiro
+                        /option>
                 </select>
             </div>
+
+            <!-- Fim campo de seleção do (value desvios-fc) -->
+
+
+
+            <!-- campo de seleção de denuncia do (value descumprimento) -->
 
             <div class="input5">
-                <p><strong>Por favor especifique qual o tipo de denúncia melhor se enquadra ao fato que você esta
-                        registrando?</strong></p>
-                <select name="descumprimento" id="">
-                    <option value="selecione">[selecione]</option>
-                    <option value="conflito">Conflito De Interesses</option>
-                    <option value="interna">Fraude Interna</option>
-                    <option value="roubo">Roubo / Destruição De Bens</option>
-                    <option value="vazamento">Vazamento / Uso Indevido De Informações</option>
-                    <option value="outros">Outros Desvios Não Comportametais</option>
+
+                <h2>
+                    Por favor especifique qual o tipo de denúncia melhor se enquadra ao fato que você esta
+                    registrando?
+                </h2>
+
+
+                <select onchange="aparecer3()" name="descumprimento" id="descum">
+                    <option value="selecione">
+                        [selecione]
+                    </option>
+                    <option value="conflito">
+                        Conflito De Interesses
+                    </option>
+                    <option value="interna">
+                        Fraude Interna
+                    </option>
+                    <option value="roubo">
+                        Roubo / Destruição De Bens
+                    </option>
+                    <option value="vazamento">
+                        Vazamento / Uso Indevido De Informações
+                    </option>
+                    <option value="outros-dv-cp">
+                        Outros Desvios Não Comportametais
+                    </option>
                 </select>
             </div>
+
+            <!-- Fim campo de seleção de denuncia do (value descumprimento) -->
+
+
+            <!-- campo de especificação do (value outros-dv-cp) -->
 
             <div class="input6">
-                <p><strong>Por favor, especifique:</strong></p>
+
+                <h2>
+                    Por favor, especifique:
+                </h2>
+
                 <input class="edit-input" id="especifique" type="text">
             </div>
+
+            <!-- Fim campo de especificação do (value outros-dv-cp) -->
+
+
+            <!-- campo de seleção de denuncia do (value violacao) -->
 
             <div class="input7">
-                <p><strong>Por favor especifique qual o tipo de denúncia melhor se enquadra ao fato que você esta
-                        registrando?</strong></p>
-                <select name="direitos" id="">
-                    <option value="selecione">[selecione]</option>
-                    <option value="ambiental">Violação Ambieltal</option>
-                    <option value="humano">Violação Aos Direitos Humanos</option>
-                    <option value="trabalhistas">Violação Aos Direitos Trabalhistas</option>
-                </select>
-            </div> -->
 
-    <!-- <div class="input8">
-                <p><strong>Como tomou conhecimento deste fato/trangressão?</strong></p>
-                <select name="fato" id="">
-                    <option value="selecione">[selecione]</option>
-                    <option value="comigo">Aconteceu comigo</option>
-                    <option value="observei">Eu a observei</option>
-                    <option value="ouvi">Ouvi falar</option>
-                    <option value="um colega">Um colega de trabalho me contou</option>
-                    <option value="me-contou">O denunciado me contou</option>
-                    <option value="por-acaso">Ouvi por acaso</option>
-                    <option value="encontrei">Encontrei um documento ou arquivo acidentalmente</option>
-                    <option value="outros">Outros</option>
+                <h2>
+                    Por favor especifique qual o tipo de denúncia melhor se enquadra ao fato que você esta
+                    registrando?
+                </h2>
+
+                <select name="direitos" id="">
+                    <option value="selecione">
+                        [selecione]
+                    </option>
+                    <option value="ambiental">
+                        Violação Ambieltal
+                    </option>
+                    <option value="humano">
+                        Violação Aos Direitos Humanos
+                    </option>
+                    <option value="trabalhistas">
+                        Violação Aos Direitos Trabalhistas
+                    </option>
                 </select>
             </div>
 
+            <!--Fim campo de seleção de denuncia do (value violacao) -->
+
+
+            <!-- campo de seleção do fato da denuncia -->
+
+            <div class="input8">
+
+                <h2>
+                    Como tomou conhecimento deste fato/trangressão?
+                </h2>
+
+                <select onchange="aparecer4()" name="fatos" id="outros-ft">
+                    <option value="selecione">
+                        [selecione]
+                    </option>
+                    <option value="comigo">
+                        Aconteceu comigo
+                    </option>
+                    <option value="observei">
+                        Eu a observei
+                    </option>
+                    <option value="ouvi">
+                        Ouvi falar
+                    </option>
+                    <option value="um colega">
+                        Um colega de trabalho me contou
+                    </option>
+                    <option value="me-contou">
+                        O denunciado me contou
+                    </option>
+                    <option value="por-acaso">
+                        Ouvi por acaso
+                    </option>
+                    <option value="encontrei">
+                        Encontrei um documento ou arquivo acidentalmente
+                    </option>
+                    <option value="outros-fatos">
+                        Outros
+                    </option>
+                </select>
+            </div>
+
+            <!-- Fim campo de seleção do fato da denuncia -->
+
+
+            <!-- campo de especificação do (value outros-fatos) -->
+
             <div class="input9">
-                <p><strong>Por favor, especifique:</strong></p>
+
+                <h2>
+                    Por favor, especifique:
+                </h2>
+
                 <input class="edit-input" id="especifique" type="text">
             </div>
 
+            <!-- Fim campo de especificação do (value outros-fatos) -->
+
+
+            <!-- campo de especificação da pessoa ou coisa denunciada -->
+
             <div class="input10">
-                <p><strong>Quem você quer denunciar?</strong></p>
-                <p>Indique o(s) nome(s) e email(s) da(s) pessoa(s) que está(ão) que realizaram o fato denunciado,
+
+                <h2>
+                    Quem você quer denunciar?
+                </h2>
+
+                <p>
+                    Indique o(s) nome(s) e email(s) da(s) pessoa(s) que está(ão) que realizaram o fato denunciado,
                     com a
-                    informação de Squad/Chapter se possível.</p>
+                    informação de Squad/Chapter se possível.
+                </p>
+
                 <input class="edit-input" type="text" name="denuncia">
 
-                <p><strong>* O que você quer denunciar?</strong></p>
-                <p>Descreva o mais detalhadamente possível o que aconteceu, indicando data(s), o(s) nome(s) da(s)
+
+                <h2>
+                    * O que você quer denunciar?
+                </h2>
+
+                <p>
+                    Descreva o mais detalhadamente possível o que aconteceu, indicando data(s), o(s) nome(s) da(s)
                     pessoa(s)
                     que está(ão) envolvida(s), bem como quando e onde o fato ocorreu e se ainda continua ocorrendo.
                 </p>
-                <textarea name="mensagem" id="" required></textarea>
 
-                <p><strong>Existem testemunhas? Em caso positivo, indique-as.</strong></p>
-                <input class="edit-input" type="text" name="testemunha"> -->
+                <textarea name="mensagem" id="" cols="70" rows="15" required></textarea>
 
-    <!-- <p><strong>Existem vítimas? Em caso positivo, indique-as.</strong></p>
+                <!-- Fim campo de especificação da pessoa ou coisa denunciada -->
+
+
+                <!-- campo de especificação de testemunhas -->
+
+                <h2>
+                    Existem testemunhas? Em caso positivo, indique-as.
+                </h2>
+
+                <input class="edit-input" type="text" name="testemunha">
+
+                <!-- Fim campo de especificação de testemunhas -->
+
+
+                <!-- campo de especificação de vitimas -->
+
+
+                <h2>
+                    Existem vítimas? Em caso positivo, indique-as.
+                </h2>
+
                 <input class="edit-input" type="text" name="vitimas">
 
-                <p><strong>Você sabe se existem evidências sobre o fato? Em caso positivo, indique-as.</strong></p>
+                <!-- Fim campo de especificação de vitimas -->
+
+
+                <!-- campo de especificação de evidencias -->
+
+
+                <h2>
+                    Você sabe se existem evidências sobre o fato? Em caso positivo, indique-as.
+                </h2>
+
                 <br>
-                <p>Quais e em que lugar(es) podem ser encontradas evidências sobre o fato denunciado? Existem
+                <p>
+                    Quais e em que lugar(es) podem ser encontradas evidências sobre o fato denunciado? Existem
                     documentos
                     que
-                    comprovam esse fato?</p>
+                    comprovam esse fato?
+                </p>
+
                 <br>
-                <p>Em caso positivo, onde podem ser encontrados? Especifique da forma mais detalhada possível.</p>
+
+                <p>
+                    Em caso positivo, onde podem ser encontrados? Especifique da forma mais detalhada possível.
+                </p>
+
                 <br>
-                <p>Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para você.</p>
+
+                <p>
+                    Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para você.
+                </p>
+
                 <input class="edit-input" type="text" name="evidencias">
 
-                <p><strong>Caso você possua evidências (lugares, documentos, imagens, vídeos, sistemas, placas de
-                        veículos,
-                        etc.), anexe-as na próxima página.</strong></p>
-                <p><strong>Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para
-                        você.</strong></p>
+                <!-- Fim campo de especificação de evidencias -->
+
+
+                <h2>
+                    Caso você possua evidências (lugares, documentos, imagens, vídeos, sistemas, placas de
+                    veículos,
+                    etc.), anexe-as na próxima página.
+                </h2>
+
+                <h2>
+                    Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para
+                    você.
+                </h2>
 
                 <h1 class="leia">Leia com Atenção</h1>
-                <p>Ao preencher o formulário, você concorda que a Contato Seguro salve e envie as informações
+                <p>
+                    Ao preencher o formulário, você concorda que a Contato Seguro salve e envie as informações
+                    prestadas
+                    à
+                    empresa/organização contratante de seus
+                    <br> serviços, possibilitando que medidas sejam tomadas a partir da
+                    análise do conteúdo de suas respostas. Para mais informações sobre a proteção de dados
+                    <br> e os direitos do
+                    usuário, acesse <a href="">este link</a>, ou a <a href="">Politica de Privacidade</a>
+                </p>
+                <input class="edit-input" type="submit">
+            </div>
+
+            <!-- Repetições para função de seleção -->
+            <!-- Repetições para função de seleção -->
+            <!-- Repetições para função de seleção -->
+            <!-- Repetições para função de seleção -->
+
+            <div class="input001">
+
+                <h2>
+                    Como tomou conhecimento deste fato/trangressão?
+                </h2>
+
+                <select onchange="aparecer4()" name="fatos" id="outros-ft">
+                    <option value="selecione">
+                        [selecione]
+                    </option>
+                    <option value="comigo">
+                        Aconteceu comigo
+                    </option>
+                    <option value="observei">
+                        Eu a observei
+                    </option>
+                    <option value="ouvi">
+                        Ouvi falar
+                    </option>
+                    <option value="um colega">
+                        Um colega de trabalho me contou
+                    </option>
+                    <option value="me-contou">
+                        O denunciado me contou
+                    </option>
+                    <option value="por-acaso">
+                        Ouvi por acaso
+                    </option>
+                    <option value="encontrei">
+                        Encontrei um documento ou arquivo acidentalmente
+                    </option>
+                    <option value="outros-fatos">
+                        Outros
+                    </option>
+                </select>
+            </div>
+
+            <!-- Fim campo de seleção do fato da denuncia -->
+
+
+            <!-- campo de especificação do (value outros-fatos) -->
+
+            <div class="input002">
+
+                <h2>
+                    Por favor, especifique:
+                </h2>
+
+                <input class="edit-input" id="especifique" type="text">
+            </div>
+
+            <!-- Fim campo de especificação do (value outros-fatos) -->
+
+
+            <!-- campo de especificação da pessoa ou coisa denunciada -->
+
+            <div class="input003">
+
+                <h2>
+                    Quem você quer denunciar?
+                </h2>
+
+                <p>
+                    Indique o(s) nome(s) e email(s) da(s) pessoa(s) que está(ão) que realizaram o fato denunciado,
+                    com a
+                    informação de Squad/Chapter se possível.
+                </p>
+
+                <input class="edit-input" type="text" name="denuncia">
+
+
+                <h2>
+                    * O que você quer denunciar?
+                </h2>
+
+                <p>
+                    Descreva o mais detalhadamente possível o que aconteceu, indicando data(s), o(s) nome(s) da(s)
+                    pessoa(s)
+                    que está(ão) envolvida(s), bem como quando e onde o fato ocorreu e se ainda continua ocorrendo.
+                </p>
+
+                <textarea name="mensagem" id="" cols="70" rows="15" required></textarea>
+
+                <!-- Fim campo de especificação da pessoa ou coisa denunciada -->
+
+
+                <!-- campo de especificação de testemunhas -->
+
+                <h2>
+                    Existem testemunhas? Em caso positivo, indique-as.
+                </h2>
+
+                <input class="edit-input" type="text" name="testemunha">
+
+                <!-- Fim campo de especificação de testemunhas -->
+
+
+                <!-- campo de especificação de vitimas -->
+
+
+                <h2>
+                    Existem vítimas? Em caso positivo, indique-as.
+                </h2>
+
+                <input class="edit-input" type="text" name="vitimas">
+
+                <!-- Fim campo de especificação de vitimas -->
+
+
+                <!-- campo de especificação de evidencias -->
+
+
+                <h2>
+                    Você sabe se existem evidências sobre o fato? Em caso positivo, indique-as.
+                </h2>
+
+                <br>
+                <p>
+                    Quais e em que lugar(es) podem ser encontradas evidências sobre o fato denunciado? Existem
+                    documentos
+                    que
+                    comprovam esse fato?
+                </p>
+
+                <br>
+
+                <p>
+                    Em caso positivo, onde podem ser encontrados? Especifique da forma mais detalhada possível.
+                </p>
+
+                <br>
+
+                <p>
+                    Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para você.
+                </p>
+
+                <input class="edit-input" type="text" name="evidencias">
+
+                <!-- Fim campo de especificação de evidencias -->
+
+
+                <h2>
+                    Caso você possua evidências (lugares, documentos, imagens, vídeos, sistemas, placas de
+                    veículos,
+                    etc.), anexe-as na próxima página.
+                </h2>
+
+                <h2>
+                    Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para
+                    você.
+                </h2>
+
+                <h1 class="leia">Leia com Atenção</h1>
+                <p>
+                    Ao preencher o formulário, você concorda que a Contato Seguro salve e envie as informações
+                    prestadas
+                    à
+                    empresa/organização contratante de seus
+                    <br> serviços, possibilitando que medidas sejam tomadas a partir da
+                    análise do conteúdo de suas respostas. Para mais informações sobre a proteção de dados
+                    <br> e os direitos do
+                    usuário, acesse <a href="">este link</a>, ou a <a href="">Politica de Privacidade</a>
+                </p>
+                <input class="edit-input" type="submit">
+            </div>
+            <div class="input004">
+
+                <h2>
+                    Como tomou conhecimento deste fato/trangressão?
+                </h2>
+
+                <select onchange="aparecer4()" name="fatos" id="outros-ft">
+                    <option value="selecione">
+                        [selecione]
+                    </option>
+                    <option value="comigo">
+                        Aconteceu comigo
+                    </option>
+                    <option value="observei">
+                        Eu a observei
+                    </option>
+                    <option value="ouvi">
+                        Ouvi falar
+                    </option>
+                    <option value="um colega">
+                        Um colega de trabalho me contou
+                    </option>
+                    <option value="me-contou">
+                        O denunciado me contou
+                    </option>
+                    <option value="por-acaso">
+                        Ouvi por acaso
+                    </option>
+                    <option value="encontrei">
+                        Encontrei um documento ou arquivo acidentalmente
+                    </option>
+                    <option value="outros-fatos">
+                        Outros
+                    </option>
+                </select>
+            </div>
+
+            <!-- Fim campo de seleção do fato da denuncia -->
+
+
+            <!-- campo de especificação do (value outros-fatos) -->
+
+            <div class="input005">
+
+                <h2>
+                    Por favor, especifique:
+                </h2>
+
+                <input class="edit-input" id="especifique" type="text">
+            </div>
+
+            <!-- Fim campo de especificação do (value outros-fatos) -->
+
+
+            <!-- campo de especificação da pessoa ou coisa denunciada -->
+
+            <div class="input006">
+
+                <h2>
+                    Quem você quer denunciar?
+                </h2>
+
+                <p>
+                    Indique o(s) nome(s) e email(s) da(s) pessoa(s) que está(ão) que realizaram o fato denunciado,
+                    com a
+                    informação de Squad/Chapter se possível.
+                </p>
+
+                <input class="edit-input" type="text" name="denuncia">
+
+
+                <h2>
+                    * O que você quer denunciar?
+                </h2>
+
+                <p>
+                    Descreva o mais detalhadamente possível o que aconteceu, indicando data(s), o(s) nome(s) da(s)
+                    pessoa(s)
+                    que está(ão) envolvida(s), bem como quando e onde o fato ocorreu e se ainda continua ocorrendo.
+                </p>
+
+                <textarea name="mensagem" id="" cols="70" rows="15" required></textarea>
+
+                <!-- Fim campo de especificação da pessoa ou coisa denunciada -->
+
+
+                <!-- campo de especificação de testemunhas -->
+
+                <h2>
+                    Existem testemunhas? Em caso positivo, indique-as.
+                </h2>
+
+                <input class="edit-input" type="text" name="testemunha">
+
+                <!-- Fim campo de especificação de testemunhas -->
+
+
+                <!-- campo de especificação de vitimas -->
+
+
+                <h2>
+                    Existem vítimas? Em caso positivo, indique-as.
+                </h2>
+
+                <input class="edit-input" type="text" name="vitimas">
+
+                <!-- Fim campo de especificação de vitimas -->
+
+
+                <!-- campo de especificação de evidencias -->
+
+
+                <h2>
+                    Você sabe se existem evidências sobre o fato? Em caso positivo, indique-as.
+                </h2>
+
+                <br>
+                <p>
+                    Quais e em que lugar(es) podem ser encontradas evidências sobre o fato denunciado? Existem
+                    documentos
+                    que
+                    comprovam esse fato?
+                </p>
+
+                <br>
+
+                <p>
+                    Em caso positivo, onde podem ser encontrados? Especifique da forma mais detalhada possível.
+                </p>
+
+                <br>
+
+                <p>
+                    Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para você.
+                </p>
+
+                <input class="edit-input" type="text" name="evidencias">
+
+                <!-- Fim campo de especificação de evidencias -->
+
+
+                <h2>
+                    Caso você possua evidências (lugares, documentos, imagens, vídeos, sistemas, placas de
+                    veículos,
+                    etc.), anexe-as na próxima página.
+                </h2>
+
+                <h2>
+                    Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para
+                    você.
+                </h2>
+
+                <h1 class="leia">Leia com Atenção</h1>
+                <p>
+                    Ao preencher o formulário, você concorda que a Contato Seguro salve e envie as informações
+                    prestadas
+                    à
+                    empresa/organização contratante de seus
+                    <br> serviços, possibilitando que medidas sejam tomadas a partir da
+                    análise do conteúdo de suas respostas. Para mais informações sobre a proteção de dados
+                    <br> e os direitos do
+                    usuário, acesse <a href="">este link</a>, ou a <a href="">Politica de Privacidade</a>
+                </p>
+                <input class="edit-input" type="submit">
+            </div>
+            <div class="input007">
+
+                <h2>
+                    Como tomou conhecimento deste fato/trangressão?
+                </h2>
+
+                <select onchange="aparecer4()" name="fatos" id="outros-ft">
+                    <option value="selecione">
+                        [selecione]
+                    </option>
+                    <option value="comigo">
+                        Aconteceu comigo
+                    </option>
+                    <option value="observei">
+                        Eu a observei
+                    </option>
+                    <option value="ouvi">
+                        Ouvi falar
+                    </option>
+                    <option value="um colega">
+                        Um colega de trabalho me contou
+                    </option>
+                    <option value="me-contou">
+                        O denunciado me contou
+                    </option>
+                    <option value="por-acaso">
+                        Ouvi por acaso
+                    </option>
+                    <option value="encontrei">
+                        Encontrei um documento ou arquivo acidentalmente
+                    </option>
+                    <option value="outros-fatos">
+                        Outros
+                    </option>
+                </select>
+            </div>
+
+            <!-- Fim campo de seleção do fato da denuncia -->
+
+
+            <!-- campo de especificação do (value outros-fatos) -->
+
+            <div class="input008">
+
+                <h2>
+                    Por favor, especifique:
+                </h2>
+
+                <input class="edit-input" id="especifique" type="text">
+            </div>
+
+            <!-- Fim campo de especificação do (value outros-fatos) -->
+
+
+            <!-- campo de especificação da pessoa ou coisa denunciada -->
+
+            <div class="input009">
+
+                <h2>
+                    Quem você quer denunciar?
+                </h2>
+
+                <p>
+                    Indique o(s) nome(s) e email(s) da(s) pessoa(s) que está(ão) que realizaram o fato denunciado,
+                    com a
+                    informação de Squad/Chapter se possível.
+                </p>
+
+                <input class="edit-input" type="text" name="denuncia">
+
+
+                <h2>
+                    * O que você quer denunciar?
+                </h2>
+
+                <p>
+                    Descreva o mais detalhadamente possível o que aconteceu, indicando data(s), o(s) nome(s) da(s)
+                    pessoa(s)
+                    que está(ão) envolvida(s), bem como quando e onde o fato ocorreu e se ainda continua ocorrendo.
+                </p>
+
+                <textarea name="mensagem" id="" cols="70" rows="15" required></textarea>
+
+                <!-- Fim campo de especificação da pessoa ou coisa denunciada -->
+
+
+                <!-- campo de especificação de testemunhas -->
+
+                <h2>
+                    Existem testemunhas? Em caso positivo, indique-as.
+                </h2>
+
+                <input class="edit-input" type="text" name="testemunha">
+
+                <!-- Fim campo de especificação de testemunhas -->
+
+
+                <!-- campo de especificação de vitimas -->
+
+
+                <h2>
+                    Existem vítimas? Em caso positivo, indique-as.
+                </h2>
+
+                <input class="edit-input" type="text" name="vitimas">
+
+                <!-- Fim campo de especificação de vitimas -->
+
+
+                <!-- campo de especificação de evidencias -->
+
+
+                <h2>
+                    Você sabe se existem evidências sobre o fato? Em caso positivo, indique-as.
+                </h2>
+
+                <br>
+                <p>
+                    Quais e em que lugar(es) podem ser encontradas evidências sobre o fato denunciado? Existem
+                    documentos
+                    que
+                    comprovam esse fato?
+                </p>
+
+                <br>
+
+                <p>
+                    Em caso positivo, onde podem ser encontrados? Especifique da forma mais detalhada possível.
+                </p>
+
+                <br>
+
+                <p>
+                    Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para você.
+                </p>
+
+                <input class="edit-input" type="text" name="evidencias">
+
+                <!-- Fim campo de especificação de evidencias -->
+
+
+                <h2>
+                    Caso você possua evidências (lugares, documentos, imagens, vídeos, sistemas, placas de
+                    veículos,
+                    etc.), anexe-as na próxima página.
+                </h2>
+
+                <h2>
+                    Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para
+                    você.
+                </h2>
+
+                <h1 class="leia">Leia com Atenção</h1>
+                <p>
+                    Ao preencher o formulário, você concorda que a Contato Seguro salve e envie as informações
                     prestadas
                     à
                     empresa/organização contratante de seus
@@ -666,11 +1020,9 @@
                 <input class="edit-input" type="submit">
             </div>
         </form>
-         FIM DO FORMULÁRIO -->
-
-
-    </div>
-
+        <script src="./script.js"></script>
+    </main>
+    
 </body>
 
 </html>

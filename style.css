@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-.hide {
-    display: none;
-}
-
-/* PARTE JUNINHO */
+/* Livre */
 
 * {
     margin: 0;
@@ -12,19 +8,20 @@
     font-family: 'roboto', sans-serif;
     color: #151515;
 }
+
 *::selection{
     background-color: #dea954;
 }
 
-textarea {
-    outline: 0;
-    margin-top: 15px;
-    margin-bottom: 30px;
-    border: 1px solid #ffac26;
+main {
+    padding-left:10px;
+    padding-right:10px;
+    max-width: 1300px;
+    margin: auto;
 }
 
-.formulario {
-    max-width: 1300px;
+form {
+    max-width: 100%;
     margin: auto;
 }
 
@@ -39,10 +36,6 @@ select {
     border-radius: 2px;
     border: 1px solid #ffac26;
     font-size: 1.1rem;
-}
-
-select,
-input {
     box-sizing: border-box;
 }
 
@@ -51,10 +44,39 @@ select:focus {
 }
 
 input {
-    padding-left: 10px;
     font-size: 1.1rem;
     border: 3px solid #ffac26;
+    box-sizing: border-box;
 }
+
+textarea {
+    outline: 0;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #ffac26;
+}
+
+h2 {
+    color: #151515;
+    font-weight: 600;
+    font-size: 1.4rem;
+}
+/* Fim Livre */
+
+
+/* Classes */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.form-group label {
+    cursor: pointer;
+    padding-left: 10px;
+}
+
 
 .edit-input {
     margin-top: 15px;
@@ -70,36 +92,9 @@ input {
     box-shadow: 0 0 10px -1px #ffac26;
 }
 
-form {
-    max-width: 100%;
-    margin: auto;
-}
-
-strong {
-    color: #151515;
-    font-weight: 600;
-    font-size: 1.4rem;
-}
-
 .leia {
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.p1 {
-    margin-top: 20px;
-}
-
-.form-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    margin-top: 20px;
-}
-
-.form-group label {
-    cursor: pointer;
-    padding-left: 10px;
 }
 
 .radio {
@@ -113,7 +108,7 @@ strong {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
 }
 
 .radio:before {
@@ -130,47 +125,28 @@ strong {
 .radio:checked:before {
     opacity: 1;
 }
+
 .radio:focus{
     box-shadow: 0 0 5px #ffac26;
 }
-.input1,.input2,.input3,.input4,.input5,.input6,.input7,.input8,.input9,.input10,.contato1,.contato,.nome-email{
+
+.input1,.input2,.input3,
+.input4,.input5,.input6,
+.input7,.input8,.input9,
+.input10,.input001,.input002,
+.input003,.input004,.input005,
+.input006,.input007,.input008,
+.input009,.contato1,.contato,
+.nome-email{
     display: none;
 }
+
 .open{
     display: block;
 }
 
-/* PARTE DANIEL */
-
-/* DIRETOS */
-/* * {
-    font-family: "Roboto", Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-} */
-
-/* #IDS */
-
-
-/* .CLASSE */
-/* .content {
-    max-width: 1024px;
-    margin: auto;
-    padding: 0 5px;
-} */
-
-/* .identify-question {
-    
+.hide {
+    display: none;
 }
 
-.format-identify-question {
-
-}
-
-.identify-box {
-    background-color: rgb(238, 238, 238);
-    max-width: 90%;
-    padding: 30px;
-    margin: 30px auto;
-    border-radius: 20px;
-} */
+/* Fim das Classes */
