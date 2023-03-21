@@ -111,7 +111,7 @@
                         * Qual o tipo de denúncia melhor se enquadra ao fato que voce está registrando?
                     </strong>
                 </p>
-                <select name="selecao2" id="" required>
+                <select onchange="aparecer1()"  class="select2" name="selecao2" id="tipo-denuncia" required>
                     <option value="selecione">[selecione]</option>
                     <option value="duvidas">Dúvida ou problema com produtos da Suprema</option>
                     <option value="criticas">Críticas, elogios ou sugestões sobre a Suprema</option>
@@ -143,7 +143,25 @@
                     </p>
                 </div>
 
+                <div class="contato1">
+                    <p>Olá!
+                        <br>
+                        Para situações como essa você pode entrar em contato com a Suprema através do nosso atendimento:
+                        <br>
+                        Por telefone: 0800 000 000
+                        <br>
+                        Por email: meajuda@suprema.com
+                        <br>
+                        Ou pelo App Suprema
+                        <br>
+                        Atenciosamente
+                        <br>
+                        Time da Suprema
+                    </p>
+                </div>
+
                 <!-- Fim Campo de informação sobre contato da opçao duvidas e criticas (value duvidas)(value criticas) -->
+
 
 
                 <!-- Campo de especificação de tipo de denuncia do (value desvios) -->
@@ -155,7 +173,7 @@
                             se enquadra ao fato que você esta registrando?
                         </strong>
                     </p>
-                    <select name="desvio-comportamentais" id="">
+                    <select onchange="aparecer2()" name="desvio-comportamentais" id="desvio-cop">
                         <option value="selecione">[selecione]</option>
                         <option value="ag-fisica">Agressão Fisica</option>
                         <option value="as-moral">Assédio Moral</option>
@@ -218,7 +236,7 @@
                         </strong>
                     </p>
 
-                    <select name="descumprimento" id="">
+                    <select onchange="aparecer3()" name="descumprimento" id="descum">
                         <option value="selecione">[selecione]</option>
                         <option value="conflito">Conflito De Interesses</option>
                         <option value="interna">Fraude Interna</option>
@@ -296,10 +314,10 @@
                     <input class="edit-input" id="especifique" type="text">
                 </div>
 
-                 <!-- Fim campo de especificação do (value outros-fatos) -->
+                <!-- Fim campo de especificação do (value outros-fatos) -->
 
 
-                 <!-- campo de especificação da pessoa ou coisa denunciada -->
+                <!-- campo de especificação da pessoa ou coisa denunciada -->
 
                 <div class="input10">
                     <p>
@@ -323,10 +341,10 @@
                     </p>
                     <textarea name="mensagem" id="" cols="70" rows="15" required></textarea>
 
-                     <!-- Fim campo de especificação da pessoa ou coisa denunciada -->
+                    <!-- Fim campo de especificação da pessoa ou coisa denunciada -->
 
 
-                      <!-- campo de especificação de testemunhas -->
+                    <!-- campo de especificação de testemunhas -->
                     <p>
                         <strong>
                             Existem testemunhas? Em caso positivo, indique-as.
@@ -334,10 +352,10 @@
                     </p>
                     <input class="edit-input" type="text" name="testemunha">
 
-                     <!-- Fim campo de especificação de testemunhas -->
+                    <!-- Fim campo de especificação de testemunhas -->
 
 
-                      <!-- campo de especificação de vitimas -->
+                    <!-- campo de especificação de vitimas -->
 
                     <p>
                         <strong>
@@ -407,7 +425,7 @@
     <!-- <div class="content hide"> -->
 
 
-        <!-- CABEÇALHO 
+    <!-- CABEÇALHO 
         <h1>
             Fazer uma Denúncia
         </h1>
@@ -417,7 +435,7 @@
          FIM DO CABEÇALHO -->
 
 
-        <!-- INÍCIO DO FORMULÁRIO 
+    <!-- INÍCIO DO FORMULÁRIO 
         <form action="post">
 
 
@@ -485,7 +503,7 @@
             <div class="input1">
                 <p><strong>Por favor, especifique:</strong></p>
                 <input class="edit-input" id="especifique" type="text"> -->
-            <!-- </div>
+    <!-- </div>
             <p><strong>* Qual o tipo de denúncia melhor se enquadra ao fato que voce está registrando?</strong></p>
             <select name="selecao2" id="" required>
                 <option value="selecione">[selecione]</option>
@@ -532,7 +550,7 @@
                     <option value="outros">Outros Desvios Comportamentais</option>
                 </select>
             </div> -->
-            <!-- <div class="input3">
+    <!-- <div class="input3">
                 <p><strong>Por favor, especifique:</strong></p>
                 <input class="edit-input" id="especifique" type="text">
             </div>
@@ -577,7 +595,7 @@
                 </select>
             </div> -->
 
-            <!-- <div class="input8">
+    <!-- <div class="input8">
                 <p><strong>Como tomou conhecimento deste fato/trangressão?</strong></p>
                 <select name="fato" id="">
                     <option value="selecione">[selecione]</option>
@@ -614,7 +632,7 @@
                 <p><strong>Existem testemunhas? Em caso positivo, indique-as.</strong></p>
                 <input class="edit-input" type="text" name="testemunha"> -->
 
-                <!-- <p><strong>Existem vítimas? Em caso positivo, indique-as.</strong></p>
+    <!-- <p><strong>Existem vítimas? Em caso positivo, indique-as.</strong></p>
                 <input class="edit-input" type="text" name="vitimas">
 
                 <p><strong>Você sabe se existem evidências sobre o fato? Em caso positivo, indique-as.</strong></p>
@@ -651,7 +669,7 @@
          FIM DO FORMULÁRIO -->
 
 
-    </div> 
+    </div>
 
 </body>
 

@@ -24,9 +24,7 @@ textarea {
 }
 
 .formulario {
-
     max-width: 1300px;
-
     margin: auto;
 }
 
@@ -135,7 +133,7 @@ strong {
 .radio:focus{
     box-shadow: 0 0 5px #ffac26;
 }
-.input1,.input2,.input3,.input4,.input5,.input6,.input7,.input8,.input9,.input10,.contato,.nome-email{
+.input1,.input2,.input3,.input4,.input5,.input6,.input7,.input8,.input9,.input10,.contato1,.contato,.nome-email{
     display: none;
 }
 .open{
