@@ -62,6 +62,9 @@ function aparecer1() {
         option111.classList.add('open');
         option222.classList.add('open');
     }
+    if (select.value == "desvios")( 
+        option01
+    )
     else {
         option05.classList.remove('open');
         option111.classList.remove('open');
