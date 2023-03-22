@@ -37,55 +37,52 @@ function aparecer1() {
     // campo desvios comportamentais
     var select = document.getElementById('tipo-denuncia');
     let option02 = document.querySelector('.input2');
+    let option888 = document.querySelector('.input8');
+    let option999 = document.querySelector('.input10');
     if (select.value == "desvios") {
         option02.classList.add('open');
+        option888.classList.add('open');
+        option999.classList.add('open');
+
+
     }
     else {
         option02.classList.remove('open');
+        option888.classList.remove('open');
+        option999.classList.remove('open');
     }
-    var select = document.getElementById('tipo-denuncia');
-    let option03 = document.querySelector('.input8');
-    if (select.value == "desvios") {
-        option03.classList.add('open');
-    }
-    else {
-        option03.classList.remove('open');
-    }
-    var select = document.getElementById('tipo-denuncia');
-    let option04 = document.querySelector('.input10');
-    if (select.value == "desvios") {
-        option04.classList.add('open');
-    }
-    else {
-        option04.classList.remove('open');
-    }
-    // Fim campo desvios comportamentais
-
+    
     // campo desvios financeiro
     var select = document.getElementById('tipo-denuncia');
     let option05 = document.querySelector('.input4');
+    let option111 = document.querySelector('.input8');
+    let option222 = document.querySelector('.input10');
     if (select.value == "desvios-fc") {
         option05.classList.add('open');
+        option111.classList.add('open');
+        option222.classList.add('open');
     }
     else {
         option05.classList.remove('open');
+        option111.classList.remove('open');
+        option222.classList.remove('open');
     }
-    var select = document.getElementById('tipo-denuncia');
-    let option06 = document.querySelector('.input001');
-    if (select.value == "desvios-fc") {
-        option06.classList.add('open');
-    }
-    else {
-        option06.classList.remove('open');
-    }
-    var select = document.getElementById('tipo-denuncia');
-    let option07 = document.querySelector('.input003');
-    if (select.value == "desvios-fc") {
-        option07.classList.add('open');
-    }
-    else {
-        option07.classList.remove('open');
-    }
+    // var select = document.getElementById('tipo-denuncia');
+    // let option06 = document.querySelector('.input001');
+    // if (select.value == "desvios-fc") {
+    //     option06.classList.add('open');
+    // }
+    // else {
+    //     option06.classList.remove('open');
+    // }
+    // var select = document.getElementById('tipo-denuncia');
+    // let option07 = document.querySelector('.input003');
+    // if (select.value == "desvios-fc") {
+    //     option07.classList.add('open');
+    // }
+    // else {
+    //     option07.classList.remove('open');
+    // }
     // Fim campo desvios financeiro
 
 
@@ -125,6 +122,7 @@ function aparecer1() {
     else {
         option11.classList.remove('open');
     }
+
     var select = document.getElementById('tipo-denuncia');
     let option12 = document.querySelector('.input007');
     if (select.value == "violacao") {
@@ -133,6 +131,7 @@ function aparecer1() {
     else {
         option12.classList.remove('open');
     }
+
     var select = document.getElementById('tipo-denuncia');
     let option13 = document.querySelector('.input009');
     if (select.value == "violacao") {
