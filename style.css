@@ -36,17 +36,13 @@ select {
     width: 100%;
     height: 60px;
     border-radius: 20px;
-    border: 3px solid #ffac26;
+    border: 2px solid #ffac26;
     font-size: 1.1rem;
     box-sizing: border-box;
 }
 
 select:focus {
     box-shadow: 0 0 10px -1px #ffac26;
-}
-
-input {
-    
 }
 
 textarea {
@@ -95,7 +91,7 @@ h2 {
     height: 60px;
     border-radius: 20px;
     font-size: 1.1rem;
-    border: 3px solid #ffac26;
+    border: 2px solid #ffac26;
     box-sizing: border-box;
 }
 
