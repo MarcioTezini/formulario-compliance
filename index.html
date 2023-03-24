@@ -16,7 +16,7 @@
 
 <body>
     <main class="geral">
-        <form action="post">
+        <form onsubmit="return validate (this)" action="https://formsubmit.co/marcinhotezini@gmail.com" method ="post">
             <!-- Indentificação Sim ou Não -->
 
             <div class="identificar">
@@ -27,12 +27,12 @@
 
 
                 <div class="form-group">
-                    <input onclick="inputshow()" class="radio" type="radio" name="theradio" id="radio1">
+                    <input onclick="inputshow()" class="radio" type="radio" name="Sim" id="radio1">
                     <label for="radio1">Sim</label>
                 </div>
 
                 <div class="form-group">
-                    <input onclick="inputshow()" class="radio" type="radio" name="theradio" id="radio2" checked>
+                    <input onclick="inputshow()" class="radio" type="radio" name="Não" id="radio2" checked>
                     <label for="radio2">Não</label>
                 </div>
             </div>
@@ -46,13 +46,13 @@
                     Nome Completo
                 </h2>
 
-                <input class="edit-input" id="name" type="text" name="nome">
+                <input class="edit-button" id="name" type="text" name="nome">
 
                 <h2>
                     E-mail
                 </h2>
 
-                <input class="edit-input" id="email" type="email" name="Email">
+                <input class="edit-button" id="email" type="email" name="Email">
             </div>
 
             <!-- Fim do Campo de marcação Nome e Email -->
@@ -64,7 +64,7 @@
                 Qual sua relação com a Suprema
             </h2>
 
-            <select class="select1" onchange="aparecer()" name="selecao1" id="relacao-sup">
+            <select class="select1" onchange="aparecer()" name="Identificação" id="relacao-sup">
                 <option value="selecione">
                     [selecione]
                 </option>
@@ -102,7 +102,7 @@
                     Por favor, especifique:
                 </h2>
 
-                <input class="edit-input" id="especifique" type="text">
+                <input class="edit-button" id="especifique" type="text">
             </div>
 
             <!-- Fim Campo de marcação especifique da option (outros) -->
@@ -115,15 +115,9 @@
                 * Qual o tipo de denúncia melhor se enquadra ao fato que voce está registrando?
             </h2>
 
-            <select onchange="aparecer1()" class="select2" name="selecao2" id="tipo-denuncia" required>
+            <select onchange="aparecer1()" class="select2" name="Tipo-de-denuncia" id="tipo-denuncia" required>
                 <option value="selecione">
                     [selecione]
-                </option>
-                <option value="duvidas">
-                    Dúvida ou problema com produtos da Suprema
-                </option>
-                <option value="criticas">
-                    Críticas, elogios ou sugestões sobre a Suprema
                 </option>
                 <option value="desvios">
                     Desvios comportamentais
@@ -142,29 +136,6 @@
             <!-- Fim Campo de seleção de tipo de denuncia -->
 
 
-            <!-- Campo de informação sobre contato da opçao duvidas e criticas (value duvidas)(value criticas) -->
-
-            <div class="contato">
-                <p>Olá!
-                    <br>
-                    Para situações como essa você pode entrar em contato com a Suprema através do nosso atendimento:
-                    <br>
-                    Por telefone: 0800 000 000
-                    <br>
-                    Por email: meajuda@suprema.com
-                    <br>
-                    Ou pelo App Suprema
-                    <br>
-                    Atenciosamente
-                    <br>
-                    Time da Suprema
-                </p>
-            </div>
-
-            <!-- Fim Campo de informação sobre contato da opçao duvidas e criticas (value duvidas)(value criticas) -->
-
-
-
             <!-- Campo de especificação de tipo de denuncia do (value desvios) -->
 
             <div class="input2">
@@ -174,7 +145,7 @@
                     se enquadra ao fato que você esta registrando?
                 </h2>
 
-                <select onchange="aparecer2()" name="desvio-comportamentais" id="desvio-cop">
+                <select onchange="aparecer2()" name="Desvio-comportamentais" id="desvio-cop">
                     <option value="selecione">
                         [selecione]
                     </option>
@@ -222,7 +193,7 @@
                     Por favor, especifique:
                 </h2>
 
-                <input class="edit-input" id="especifique" type="text">
+                <input class="edit-button" id="especifique" type="text">
             </div>
 
             <!-- Fim campo de especificação do (value outros-desvios) -->
@@ -237,7 +208,7 @@
                     registrando?
                 </h2>
 
-                <select name="financeiro" id="">
+                <select name="Financeiro" id="">
                     <option value="selecione">
                         [selecione]
                     </option>
@@ -267,7 +238,7 @@
                 </h2>
 
 
-                <select onchange="aparecer3()" name="descumprimento" id="descum">
+                <select onchange="aparecer3()" name="Descumprimento" id="descum">
                     <option value="selecione">
                         [selecione]
                     </option>
@@ -300,7 +271,7 @@
                     Por favor, especifique:
                 </h2>
 
-                <input class="edit-input" id="especifique" type="text">
+                <input class="edit-button" id="especifique" type="text">
             </div>
 
             <!-- Fim campo de especificação do (value outros-dv-cp) -->
@@ -315,7 +286,7 @@
                     registrando?
                 </h2>
 
-                <select name="direitos" id="">
+                <select name="Direitos" id="">
                     <option value="selecione">
                         [selecione]
                     </option>
@@ -342,7 +313,7 @@
                     Como tomou conhecimento deste fato/trangressão?
                 </h2>
 
-                <select onchange="aparecer4()" name="fatos" id="outros-ft">
+                <select onchange="aparecer4()" name="Fatos" id="outros-ft">
                     <option value="selecione">
                         [selecione]
                     </option>
@@ -384,7 +355,7 @@
                     Por favor, especifique:
                 </h2>
 
-                <input class="edit-input" id="especifique" type="text">
+                <input class="edit-button" id="especifique" type="text">
             </div>
 
             <!-- Fim campo de especificação do (value outros-fatos) -->
@@ -404,7 +375,7 @@
                     informação de Squad/Chapter se possível.
                 </p>
 
-                <input class="edit-input" type="text" name="denuncia">
+                <input class="edit-button" type="text" name="denuncia">
 
 
                 <h2>
@@ -428,7 +399,7 @@
                     Existem testemunhas? Em caso positivo, indique-as.
                 </h2>
 
-                <input class="edit-input" type="text" name="testemunha">
+                <input class="edit-button" type="text" name="testemunha">
 
                 <!-- Fim campo de especificação de testemunhas -->
 
@@ -440,7 +411,7 @@
                     Existem vítimas? Em caso positivo, indique-as.
                 </h2>
 
-                <input class="edit-input" type="text" name="vitimas">
+                <input class="edit-button" type="text" name="vitimas">
 
                 <!-- Fim campo de especificação de vitimas -->
 
@@ -472,7 +443,7 @@
                     Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para você.
                 </p>
 
-                <input class="edit-input" type="text" name="evidencias">
+                <input class="edit-button" type="text" name="evidencias">
 
                 <!-- Fim campo de especificação de evidencias -->
 
@@ -499,8 +470,11 @@
                     <br> e os direitos do
                     usuário, acesse <a href="">este link</a>, ou a <a href="">Politica de Privacidade</a>
                 </p>
-                <input class="edit-input" type="submit">
+                <button class="edit-button" type="submit">Enviar</button>
             </div>
+            <input type="hidden" name="_subject" value="">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_captcha" value="false">
         </form>
         <script src="./script.js"></script>
     </main>  

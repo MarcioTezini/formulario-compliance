@@ -6,16 +6,18 @@
     margin: 0;
     padding: 0;
     font-family: 'roboto', sans-serif;
-    color: #151515;
+    color: #ffffff;
+    background-color: black;
 }
 
-*::selection{
+*::selection {
     background-color: #dea954;
 }
 
 main {
-    padding-left:10px;
-    padding-right:10px;
+    background-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
     max-width: 1300px;
     margin: auto;
 }
@@ -32,9 +34,9 @@ select {
     margin-bottom: 30px;
     padding-left: 10px;
     width: 100%;
-    height: 50px;
-    border-radius: 2px;
-    border: 1px solid #ffac26;
+    height: 60px;
+    border-radius: 20px;
+    border: 3px solid #ffac26;
     font-size: 1.1rem;
     box-sizing: border-box;
 }
@@ -44,6 +46,7 @@ select:focus {
 }
 
 input {
+    border-radius: 20px;
     font-size: 1.1rem;
     border: 3px solid #ffac26;
     box-sizing: border-box;
@@ -59,14 +62,20 @@ textarea {
 }
 
 h2 {
-    color: #151515;
+    color: #ffac26;
     font-weight: 600;
     font-size: 1.4rem;
 }
+
 /* Fim Livre */
 
 
 /* Classes */
+.identificar {
+    margin-top: 30px;
+
+}
+
 .form-group {
     display: flex;
     align-items: center;
@@ -80,21 +89,21 @@ h2 {
 }
 
 
-.edit-input {
+.edit-button {
+    padding-left: 10px;
+    cursor: pointer;
     margin-top: 15px;
     margin-bottom: 30px;
     width: 100%;
-    height: 50px;
-    border-radius: 5px;
-    border: 1px solid #ffac26;
+    height: 60px;
 }
 
-.edit-input:focus {
+.edit-button:focus {
     outline: 0;
     box-shadow: 0 0 10px -1px #ffac26;
 }
 
-.contato{
+.contato {
     max-width: 1000px;
     font-size: 35px;
     line-height: 60px;
@@ -132,25 +141,39 @@ h2 {
 }
 
 .radio:checked:before {
-    opacity: 1;
+    opacity:1 ;
 }
 
-.radio:focus{
+.radio:focus {
     box-shadow: 0 0 5px #ffac26;
 }
 
-.input1,.input2,.input3,
-.input4,.input5,.input6,
-.input7,.input8,.input9,
-.input10,.input001,.input002,
-.input003,.input004,.input005,
-.input006,.input007,.input008,
-.input009,.contato1,.contato,
-.nome-email{
+.input1,
+.input2,
+.input3,
+.input4,
+.input5,
+.input6,
+.input7,
+.input8,
+.input9,
+.input10,
+.input001,
+.input002,
+.input003,
+.input004,
+.input005,
+.input006,
+.input007,
+.input008,
+.input009,
+.contato1,
+.contato,
+.nome-email {
     display: none;
 }
 
-.open{
+.open {
     display: block;
 }
 

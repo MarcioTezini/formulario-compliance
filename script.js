@@ -24,64 +24,43 @@ function aparecer1() {
     var select = document.getElementById('tipo-denuncia');
     let tipodenuncia = document.querySelector('.input2');
     let financeiro = document.querySelector('.input4');
-    let contact = document.querySelector('.contato');
     let politica = document.querySelector('.input5');
     let violation = document.querySelector('.input7');
     let conhecimento = document.querySelector('.input8');
     let campofinal = document.querySelector('.input10');
 
-
-    if (select.value == "duvidas") {
+    if (select.value == "desvios") {
         financeiro.classList.remove('open');
-        tipodenuncia.classList.remove('open');
-        conhecimento.classList.remove('open');
-        campofinal.classList.remove('open');
         politica.classList.remove('open');
         violation.classList.remove('open');
-        contact.classList.add('open');
-    }
-
-    else if (select.value == "criticas") {
-        financeiro.classList.remove('open');
-        tipodenuncia.classList.remove('open');
-        conhecimento.classList.remove('open');
-        campofinal.classList.remove('open');
-        politica.classList.remove('open');
-        violation.classList.remove('open');
-        contact.classList.add('open');
-    }
-
-    else if (select.value == "desvios") {
-        contact.classList.remove('open');
-        financeiro.classList.remove('open');
         tipodenuncia.classList.add('open');
         conhecimento.classList.add('open');
         campofinal.classList.add('open');
     }
 
     else if (select.value == "desvios-fc") {
-        contact.classList.remove('open');
         tipodenuncia.classList.remove('open');
+        violation.classList.remove('open');
+        politica.classList.remove('open');
         financeiro.classList.add('open');
         conhecimento.classList.add('open');
         campofinal.classList.add('open');
     }
 
     else if (select.value == "descumprimento") {
-        contact.classList.remove('open');
         tipodenuncia.classList.remove('open');
         financeiro.classList.remove('open');
+        violation.classList.remove('open');
         politica.classList.add('open');
         conhecimento.classList.add('open');
         campofinal.classList.add('open');
     }
 
     else if (select.value == "violacao") {
-        contact.classList.remove('open');
         tipodenuncia.classList.remove('open');
         financeiro.classList.remove('open');
         politica.classList.remove('open');
-        violation.classList.remove('open');
+        violation.classList.add('open');
         conhecimento.classList.add('open');
         campofinal.classList.add('open');
     }
