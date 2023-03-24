@@ -46,10 +46,7 @@ select:focus {
 }
 
 input {
-    border-radius: 20px;
-    font-size: 1.1rem;
-    border: 3px solid #ffac26;
-    box-sizing: border-box;
+    
 }
 
 textarea {
@@ -96,6 +93,10 @@ h2 {
     margin-bottom: 30px;
     width: 100%;
     height: 60px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    border: 3px solid #ffac26;
+    box-sizing: border-box;
 }
 
 .edit-button:focus {
@@ -136,12 +137,12 @@ h2 {
     width: 15px;
     background-color: #ffac26;
     border-radius: 50%;
-    opacity: 0;
+    opacity:0;
     transition: all 300ms ease-in-out;
 }
 
 .radio:checked:before {
-    opacity:1 ;
+    opacity:1;
 }
 
 .radio:focus {
