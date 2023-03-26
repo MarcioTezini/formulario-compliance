@@ -7,7 +7,7 @@
     padding: 0;
     font-family: 'roboto', sans-serif;
     color: #ffffff;
-    background-color:#151515;
+    background-color:#1b1b1b;
 }
 
 *::selection {
@@ -15,7 +15,7 @@
 }
 
 main {
-    background-color: #151515;
+    background-color: #1b1b1b;
     padding-left: 10px;
     padding-right: 10px;
     max-width: 1300px;
@@ -27,7 +27,14 @@ form {
     margin: auto;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 select {
+    background-color: #303030;
     outline: none;
     cursor: pointer;
     margin-top: 15px;
@@ -36,13 +43,13 @@ select {
     width: 100%;
     height: 60px;
     border-radius: 20px;
-    border: 2px solid #ffac26;
+    border: none;
     font-size: 1.1rem;
     box-sizing: border-box;
 }
 
 select:focus {
-    box-shadow: 0 0 10px -1px #ffac26;
+    box-shadow: 0 0 10px -1px #d9933f;
 }
 
 textarea {
@@ -51,11 +58,11 @@ textarea {
     outline: 0;
     margin-top: 15px;
     margin-bottom: 30px;
-    border: 1px solid #ffac26;
+    border: 1px solid #d9933f;
 }
 
 h2 {
-    color: #ffac26;
+    color: #b9933f;
     font-weight: 600;
     font-size: 1.4rem;
 }
@@ -64,16 +71,31 @@ h2 {
 
 
 /* Classes */
+.consulta{
+    text-align: center;
+}
+.consult{
+    font-size: 40px;
+    text-align: center;
+}
 .identificar {
     margin-top: 30px;
 
 }
+.campo-de-denuncia{
+    display: none;
+}
 
 .form-group {
+    background-color: #303030;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     margin-top: 20px;
+    border: none;
 }
 
 .form-group label {
@@ -83,6 +105,7 @@ h2 {
 
 
 .edit-button {
+    background-color: #303030;
     padding-left: 10px;
     cursor: pointer;
     margin-top: 15px;
@@ -91,13 +114,54 @@ h2 {
     height: 60px;
     border-radius: 20px;
     font-size: 1.1rem;
-    border: 2px solid #ffac26;
+    border: none;
     box-sizing: border-box;
+}
+.edit-button1 {
+    background-color: #1b1b1b;
+    padding-left: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 60px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    border: none;
+    box-sizing: border-box;
+}
+.edit-button2 {
+    background-color: #303030;
+    padding-left: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    width: 50%;
+    height: 60px;
+    border-radius: 20px;
+    font-size: 25px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.edit-button3{
+    text-align: center;
+    appearance: none;
 }
 
 .edit-button:focus {
     outline: 0;
-    box-shadow: 0 0 10px -1px #ffac26;
+    box-shadow: 0 0 10px -1px #d9933f;
+}
+
+.edit-button1:focus {
+    outline: 0;
+    box-shadow: 0 0 10px -1px #d9933f;
+}
+
+.edit-button2:focus {
+    outline: 0;
+    box-shadow: 0 0 10px -1px #d9933f;
 }
 
 .contato {
@@ -113,13 +177,14 @@ h2 {
 }
 
 .radio {
+    background-color: #303030;
     outline: none;
     cursor: pointer;
     appearance: none;
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    border: 2px solid #ffac26;
+    border: 2px solid #d9933f;
     position: relative;
     display: flex;
     align-items: center;
@@ -131,7 +196,7 @@ h2 {
     position: absolute;
     height: 15px;
     width: 15px;
-    background-color: #ffac26;
+    background-color: #d9933f;
     border-radius: 50%;
     opacity:0;
     transition: all 300ms ease-in-out;
@@ -142,7 +207,10 @@ h2 {
 }
 
 .radio:focus {
-    box-shadow: 0 0 5px #ffac26;
+    box-shadow: 0 0 5px #d9933f;
+}
+label{
+    background-color: #303030;
 }
 
 .input1,
@@ -166,8 +234,23 @@ h2 {
 .input009,
 .contato1,
 .contato,
-.nome-email {
+.nome-email{
     display: none;
+}
+
+.nome-email {
+    margin: 40px 0 40px 0;
+    border-radius: 40px;
+    padding: 50px;
+    background-color: #303030;
+}
+
+.nom-com{
+    background-color: #303030;
+}
+
+.e-mail{
+    background-color: #303030;
 }
 
 .open {
@@ -176,6 +259,16 @@ h2 {
 
 .hide {
     display: none;
+}
+.protocolo{
+    margin-top: 20%;
+    text-align: center;
+}
+
+.link{
+    background-color: #303030;  
+    text-decoration: none;
+    cursor: pointer;   
 }
 
 /* Fim das Classes */

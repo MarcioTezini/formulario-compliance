@@ -1,3 +1,9 @@
+function denunciashow() {
+    let inputon = document.querySelector('.campo-de-denuncia');
+    if (inputon.classList.add('open')) {
+
+    }
+}
 function inputshow() {
     let inputon = document.querySelector('.nome-email');
     if (inputon.classList.contains('open')) {
@@ -111,5 +117,14 @@ function aparecer4() {
     
     else {
         outrosdesv.classList.remove('open');
+    }
+}
+function envioForm() {
+    let inputon = document.querySelector('.protocolo');
+    if (inputon.classList.contains('open')) {
+        inputon.classList.remove('open');
+
+    } else {
+        inputon.classList.add('open');
     }
 }

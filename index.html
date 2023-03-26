@@ -15,124 +15,143 @@
 </head>
 
 <body>
+
     <main class="geral">
-        <form  action="https://formsubmit.co/marcinhotezini@gmail.com" method ="post">
+        <form>
+            <div class="consulta">
+                <div>
+                    <h2 class="consult">Consultar andamento de denúncia </h2>
+                    <input class="edit-button2 edit-button3"  type="number" name="Consultar-Denuncia">
+                    <button class="edit-button2" type="submit">Consultar</button>
+                </div>
+
+                <div>
+                    <h2 class="consult">Fazer uma nova denúncia</h2>
+                    <button onclick="denunciashow()" class="edit-button2" type="submit">Denunciar</button>
+                </div>
+
+            </div>
+
             <!-- Indentificação Sim ou Não -->
 
-            <div class="identificar">
+            
+            <div class="campo-de-denuncia">
 
-                <h2>
-                    Você gostaria de se identificar?
-                </h2>
+                <div class="identificar">
+
+                    <h2>
+                        Você gostaria de se identificar?
+                    </h2>
 
 
-                <div class="form-group">
-                    <input onclick="inputshow()" class="radio" type="radio" name="theradio" id="radio1">
-                    <label for="radio1">Sim</label>
+                    <div class="form-group">
+                        <input onclick="inputshow()" class="radio" type="radio" name="theradio" id="radio1">
+                        <label for="radio1">Sim</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input onclick="inputshow()" class="radio" type="radio" name="theradio" id="radio2" checked>
+                        <label for="radio2">Não</label>
+                    </div>
+
                 </div>
 
-                <div class="form-group">
-                    <input onclick="inputshow()" class="radio" type="radio" name="theradio" id="radio2" checked>
-                    <label for="radio2">Não</label>
+                <!-- Fim Indentificação Sim ou Não -->
+
+                <!-- Campo de seleção Nome e Email -->
+
+                <div class="nome-email">
+                    <h2 class="nom-com">
+                        Nome Completo
+                    </h2>
+
+                    <input class="edit-button1" id="name" type="text" name="nome">
+
+                    <h2 class="e-mail">
+                        E-mail
+                    </h2>
+
+                    <input class="edit-button1" id="email" type="email" name="Email">
                 </div>
 
-            </div>
+                <!-- Fim do Campo de marcação Nome e Email -->
 
-            <!-- Fim Indentificação Sim ou Não -->
 
-            <!-- Campo de seleção Nome e Email -->
-
-            <div class="nome-email">
-                <h2>
-                    Nome Completo
-                </h2>
-
-                <input class="edit-button" id="name" type="text" name="nome">
+                <!-- Campo de seleção de relação  -->
 
                 <h2>
-                    E-mail
+                    Qual sua relação com a Suprema
                 </h2>
 
-                <input class="edit-button" id="email" type="email" name="Email">
-            </div>
+                <select class="select1" onchange="aparecer()" name="Identificação" id="relacao-sup">
+                    <option value="selecione">
+                        [selecione]
+                    </option>
+                    <option value="colaboradar">
+                        Sou colaborador
+                    </option>
+                    <option value="ex-colaborador">
+                        Sou ex-colaborador
+                    </option>
+                    <option value="cliente">
+                        Sou cliente
+                    </option>
+                    <option value="fornecedor">
+                        Sou fornecedor
+                    </option>
+                    <option value="parceiro">
+                        Sou parceiro
+                    </option>
+                    <option value="prestador-servico">
+                        Sou prestador de serviços
+                    </option>
+                    <option value="outros">
+                        Outros
+                    </option>
+                </select>
 
-            <!-- Fim do Campo de marcação Nome e Email -->
-
-
-            <!-- Campo de seleção de relação  -->
-
-            <h2>
-                Qual sua relação com a Suprema
-            </h2>
-
-            <select class="select1" onchange="aparecer()" name="Identificação" id="relacao-sup">
-                <option value="selecione">
-                    [selecione]
-                </option>
-                <option value="colaboradar">
-                    Sou colaborador
-                </option>
-                <option value="ex-colaborador">
-                    Sou ex-colaborador
-                </option>
-                <option value="cliente">
-                    Sou cliente
-                </option>
-                <option value="fornecedor">
-                    Sou fornecedor
-                </option>
-                <option value="parceiro">
-                    Sou parceiro
-                </option>
-                <option value="prestador-servico">
-                    Sou prestador de serviços
-                </option>
-                <option value="outros">
-                    Outros
-                </option>
-            </select>
-
-            <!-- Fim Campo de seleção de relação  -->
+                <!-- Fim Campo de seleção de relação  -->
 
 
-            <!-- Campo de marcação especifique da option (outros) -->
+                <!-- Campo de marcação especifique da option (outros) -->
 
-            <div class="input1">
+                <div class="input1">
+
+                    <h2>
+                        Por favor, especifique:
+                    </h2>
+
+                    <input class="edit-button" id="especifique" type="text">
+                </div>
+
+                <!-- Fim Campo de marcação especifique da option (outros) -->
+
+
+                <!-- Campo de seleção de tipo de denuncia -->
+
 
                 <h2>
-                    Por favor, especifique:
+                    * Qual o tipo de denúncia melhor se enquadra ao fato que voce está registrando?
                 </h2>
 
-                <input class="edit-button" id="especifique" type="text">
+                <select onchange="aparecer1()" class="select2" name="Tipo-de-denuncia" id="tipo-denuncia" required>
+                    <option value="selecione">
+                        [selecione]
+                    </option>
+                    <option value="desvios">
+                        Desvios comportamentais
+                    </option>
+                    <option value="desvios-fc">
+                        Desvios financeiros ou contábeis
+                    </option>
+                    <option value="descumprimento">
+                        Descumprimento de políticas ou procedimentos
+                    </option>
+                    <option value="violacao">
+                        Violação aos direito trabalhista / humanos / ambientais
+                    </option>
+                </select>
             </div>
-
-            <!-- Fim Campo de marcação especifique da option (outros) -->
-
-
-            <!-- Campo de seleção de tipo de denuncia -->
-
-
-            <h2>
-                * Qual o tipo de denúncia melhor se enquadra ao fato que voce está registrando?
-            </h2>
-
-            <select onchange="aparecer1()" class="select2" name="Tipo-de-denuncia" id="tipo-denuncia" required>
-                <option value="selecione">
-                    [selecione]
-                </option>
-                <option value="desvios">
-                    Desvios comportamentais
-                </option>
-                <option value="desvios-fc">
-                    Desvios financeiros ou contábeis
-                </option>
-                <option value="descumprimento">
-                    Descumprimento de políticas ou procedimentos
-                </option>
-                <option value="violacao">
-                    Violação aos direito trabalhista / humanos / ambientais
-                </option>
-            </select>
 
             <!-- Fim Campo de seleção de tipo de denuncia -->
 
@@ -389,7 +408,7 @@
                     que está(ão) envolvida(s), bem como quando e onde o fato ocorreu e se ainda continua ocorrendo.
                 </p>
 
-                <textarea name="mensagem" id=""  required></textarea>
+                <textarea name="mensagem"  required></textarea>
 
                 <!-- Fim campo de especificação da pessoa ou coisa denunciada -->
 
@@ -471,14 +490,11 @@
                     <br> e os direitos do
                     usuário, acesse <a href="">este link</a>, ou a <a href="">Politica de Privacidade</a>
                 </p>
-                <button class="edit-button" type="submit">Enviar</button>
-            </div>
-            <input type="hidden" name="_subject" value="">
-            <input type="text" name="_honey" style="display:none">
-            <input type="hidden" name="_captcha" value="false">
+                <a class="link" href="protocolo.html"><button type="submit" class="edit-button2">Enviar</button></a>
+                </div>
         </form>
+        
         <script src="./script.js"></script>
-    </main>  
+    </main>
 </body>
-
 </html>
