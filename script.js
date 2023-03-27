@@ -5,14 +5,23 @@ function denunciashow() {
     }
 }
 function inputshow() {
+    var select = document.getElementById ('radio1')
     let inputon = document.querySelector('.nome-email');
-    if (inputon.classList.contains('open')) {
-        inputon.classList.remove('open');
-
-    } else {
+    if (select = 'radio1') {
         inputon.classList.add('open');
+       
     }
 }
+
+function inputshow2() {
+    var select = document.getElementById ('radio2')
+    let inputon = document.querySelector('.nome-email');
+    if (select = 'radio2') {
+        inputon.classList.remove('open');
+       
+    }
+}
+
 function inputshow1() {
     let inputon = document.querySelector('.input11');
     if (inputon.classList.contains('open')) {
