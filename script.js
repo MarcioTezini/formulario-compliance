@@ -13,6 +13,15 @@ function inputshow() {
         inputon.classList.add('open');
     }
 }
+function inputshow1() {
+    let inputon = document.querySelector('.input11');
+    if (inputon.classList.contains('open')) {
+        inputon.classList.remove('open');
+
+    } else {
+        inputon.classList.add('open');
+    }
+}
 function aparecer() {
     var select = document.getElementById('relacao-sup');
     let option = document.querySelector('.input1');

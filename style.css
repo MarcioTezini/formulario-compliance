@@ -71,21 +71,30 @@ h2 {
 
 
 /* Classes */
+.texto-inicio{
+    text-align: justify;
+    font-size: 20px;
+    line-height: 40px;
+    margin-bottom: 100px;
+}
 .consulta{
+    margin-top: 100px;
     text-align: center;
 }
 .consult{
     font-size: 40px;
     text-align: center;
 }
+
+.canal{
+font-size: 40px;
+margin: 50px 0 50px 0;
+}
+
 .identificar {
     margin-top: 30px;
 
 }
-.campo-de-denuncia{
-    display: none;
-}
-
 .form-group {
     background-color: #303030;
     border-radius: 10px;
@@ -136,7 +145,7 @@ h2 {
     cursor: pointer;
     margin-top: 15px;
     margin-bottom: 30px;
-    width: 50%;
+    width: 300px;
     height: 60px;
     border-radius: 20px;
     font-size: 25px;
@@ -209,8 +218,13 @@ h2 {
 .radio:focus {
     box-shadow: 0 0 5px #d9933f;
 }
+
 label{
     background-color: #303030;
+}
+
+.d126{
+ margin-bottom: 20px;
 }
 
 .input1,
@@ -232,6 +246,7 @@ label{
 .input007,
 .input008,
 .input009,
+.input11,
 .contato1,
 .contato,
 .nome-email{
@@ -272,6 +287,12 @@ label{
     text-decoration: none;
     cursor: pointer;   
 }
+.link1{
+    border-radius: 20px;
+    padding: 12px 25px;
+    background-color: #303030;
+    text-decoration: none;
+}
 
 .protocol {
     background-color: #303030;
@@ -284,4 +305,26 @@ label{
     font-size: 25px;
     border: none;
 }
+.escolha-n-c{
+    text-align: center;
+    margin: auto;
+}
+.n-c{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #b9933f;
+}
+.space{
+    margin-right: 20px;
+}
+.space1{
+    margin: 50px 0 50px 0;
+}
 /* Fim das Classes */
+
+@media screen and (max-width:1000px) {
+    .edit-button2{
+        width: 80%;
+    }
+    
+}
