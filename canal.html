@@ -18,7 +18,7 @@
 
     <main class="geral">
         <form>
-            
+
 
             <!-- Indentificação Sim ou Não -->
 
@@ -513,7 +513,7 @@
                     usuário, acesse <a href="">este link</a>, ou a <a href="">Politica de Privacidade</a>
                 </p>
 
-                <h2 class="space1" >Enviar copia para seu Email?</h2>
+                <h2 class="space1">Enviar copia para seu Email?</h2>
 
                 <div class="form-group">
                     <input onclick="inputshow1()" class="radio" type="radio" name="theradio1" id="radio1">
@@ -521,7 +521,7 @@
                         Sim
                     </label>
                 </div>
-                
+
                 <div class="form-group">
 
                     <input onclick="inputshow1()" class="radio" type="radio" name="theradio1" id="radio2" checked>
@@ -532,16 +532,29 @@
 
                 <div class="input11">
 
-                <input class="edit-button" type="email" placeholder="Digite seu Email">
+                    <input class="edit-button" type="email" placeholder="Digite seu Email">
 
                 </div>
 
                 <button type="submit" class="protocol"><a class="link" href="protocolo.html">Enviar</a></button>
             </div>
         </form>
-
         <script src="./script.js"></script>
     </main>
+    <div class="modal-cook" style="display: none;">
+        <div class="cookies-container white_box hide"
+            style="width: 68%; margin: 0px auto; position: fixed; bottom: 2em; left: 17%; z-index: 1000; display: flex;">
+            <div class="cookies-content" style="display: flex; gap: .5em; align-items: center;">
+                <p class="p1"  style="color: black">Utilizamos cookies essenciais e tecnologias semelhantes de acordo com a
+                    nossa <a href="policy.html" target="_blank" style="color: rgb(54, 54, 54);">Politica de
+                        Privacidade</a> e, ao continuar navegando, você concorda com estas condições.</p>
+                <div class="btns" style="display: flex; gap: .5em;">
+                    <button class="btn btn-primary form-control-sm" id="saveCookies">ACEITAR</button>
+                    <button class="btn btn-primary form-control-sm" id="rejCookies">REJEITAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
