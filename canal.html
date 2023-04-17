@@ -17,7 +17,7 @@
 <body>
 
     <main class="geral">
-        <form>
+        <form onsubmit="denuncia()">
 
 
             <!-- Indentificação Sim ou Não -->
@@ -94,7 +94,7 @@
                         E-mail
                     </h2>
 
-                    <input class="edit-button1" id="email" type="email" name="Email">
+                    <input class="edit-button1" id="email" type="email" name="email">
                 </div>
 
                 <!-- Fim do Campo de marcação Nome e Email -->
@@ -106,7 +106,7 @@
                     Qual sua relação com a Suprema
                 </h2>
 
-                <select class="select1" onchange="aparecer()" name="Identificação" id="relacao-sup">
+                <select class="select1" onchange="aparecer()" name="Identificação" id="relacaoSup">
                     <option value="selecione">
                         [selecione]
                     </option>
@@ -157,7 +157,7 @@
                     * Qual o tipo de denúncia melhor se enquadra ao fato que voce está registrando?
                 </h2>
 
-                <select onchange="aparecer1()" class="select2" name="Tipo-de-denuncia" id="tipo-denuncia" required>
+                <select onchange="aparecer1()" class="select2" name="Tipo-de-denuncia" id="tipoDenuncia" required>
                     <option value="selecione">
                         [selecione]
                     </option>
@@ -188,7 +188,7 @@
                     se enquadra ao fato que você esta registrando?
                 </h2>
 
-                <select onchange="aparecer2()" name="Desvio-comportamentais" id="desvio-cop">
+                <select onchange="aparecer2()" name="Desvio-comportamentais" id="desvioCop">
                     <option value="selecione">
                         [selecione]
                     </option>
@@ -236,7 +236,7 @@
                     Por favor, especifique:
                 </h2>
 
-                <input class="edit-button" id="especifique" type="text">
+                <input class="edit-button" id="especifique2" type="text">
             </div>
 
             <!-- Fim campo de especificação do (value outros-desvios) -->
@@ -251,7 +251,7 @@
                     registrando?
                 </h2>
 
-                <select name="Financeiro" id="">
+                <select name="Financeiro" id="finan">
                     <option value="selecione">
                         [selecione]
                     </option>
@@ -314,7 +314,7 @@
                     Por favor, especifique:
                 </h2>
 
-                <input class="edit-button" id="especifique" type="text">
+                <input class="edit-button" id="especifique3" type="text">
             </div>
 
             <!-- Fim campo de especificação do (value outros-dv-cp) -->
@@ -329,7 +329,7 @@
                     registrando?
                 </h2>
 
-                <select name="Direitos" id="">
+                <select name="Direitos" id="direit">
                     <option value="selecione">
                         [selecione]
                     </option>
@@ -356,7 +356,7 @@
                     Como tomou conhecimento deste fato/trangressão?
                 </h2>
 
-                <select onchange="aparecer4()" name="Fatos" id="outros-ft">
+                <select onchange="aparecer4()" name="Fatos" id="outrosFt">
                     <option value="selecione">
                         [selecione]
                     </option>
@@ -398,7 +398,7 @@
                     Por favor, especifique:
                 </h2>
 
-                <input class="edit-button" id="especifique" type="text">
+                <input class="edit-button" id="especifique4" type="text">
             </div>
 
             <!-- Fim campo de especificação do (value outros-fatos) -->
@@ -417,7 +417,7 @@
                     denunciado (s) com o máximo de detalhes para identificação do (s) envolvido (s).
                 </p>
 
-                <input class="edit-button" type="text" name="denuncia">
+                <input class="edit-button" type="text" name="denuncia" id="nomes">
 
 
                 <h2 class="d126">
@@ -430,7 +430,7 @@
                     que está(ão) envolvida(s), bem como quando e onde o fato ocorreu e se ainda continua ocorrendo.
                 </p>
 
-                <textarea name="mensagem" required></textarea>
+                <textarea id="mensagem" name="mensagem" required></textarea>
 
                 <!-- Fim campo de especificação da pessoa ou coisa denunciada -->
 
@@ -441,7 +441,7 @@
                     Existem testemunhas? Em caso positivo, indique-as.
                 </h2>
 
-                <input class="edit-button" type="text" name="testemunha">
+                <input class="edit-button" type="text" id="testemunha" name="testemunha">
 
                 <!-- Fim campo de especificação de testemunhas -->
 
@@ -453,7 +453,7 @@
                     Existem vítimas? Em caso positivo, indique-as.
                 </h2>
 
-                <input class="edit-button" type="text" name="vitimas">
+                <input class="edit-button" type="text" id="vitimas" name="vitimas">
 
                 <!-- Fim campo de especificação de vitimas -->
 
@@ -485,7 +485,7 @@
                     Lembre-se: qualquer informação pode ser útil, por mais irrelevante que ela pareça para você.
                 </p>
 
-                <input class="edit-button" type="text" name="evidencias">
+                <input class="edit-button" type="text" name="evidencias" id="evidencias">
 
                 <!-- Fim campo de especificação de evidencias -->
 
@@ -516,7 +516,7 @@
                 <h2 class="space1">Enviar copia para seu Email?</h2>
 
                 <div class="form-group">
-                    <input onclick="inputshow1()" class="radio" type="radio" name="theradio1" id="radio1">
+                    <input onclick="inputshow1()" class="radio" type="radio" name="theradio1" id="radio3">
                     <label for="radio1">
                         Sim
                     </label>
@@ -524,7 +524,7 @@
 
                 <div class="form-group">
 
-                    <input onclick="inputshow1()" class="radio" type="radio" name="theradio1" id="radio2" checked>
+                    <input onclick="inputshow1()" class="radio" type="radio" name="theradio1" id="radio4" checked>
                     <label for="radio2">
                         Não
                     </label>
@@ -532,16 +532,16 @@
 
                 <div class="input11">
 
-                    <input class="edit-button" type="email" placeholder="Digite seu Email">
+                    <input class="edit-button" type="email" id="email2" placeholder="Digite seu Email">
 
                 </div>
 
                 <button type="submit" class="protocol"><a class="link" href="protocolo.html">Enviar</a></button>
             </div>
         </form>
-        <script src="./script.js"></script>
+        
     </main>
-    <div class="modal-cook" style="display: none;">
+    <div class="modal-cook" style="display: none" >
         <div class="cookies-container white_box hide"
             style="width: 68%; margin: 0px auto; position: fixed; bottom: 2em; left: 17%; z-index: 1000; display: flex;">
             <div class="cookies-content" style="display: flex; gap: .5em; align-items: center;">
@@ -549,12 +549,13 @@
                     nossa <a href="policy.html" target="_blank" style="color: rgb(54, 54, 54);">Politica de
                         Privacidade</a> e, ao continuar navegando, você concorda com estas condições.</p>
                 <div class="btns" style="display: flex; gap: .5em;">
-                    <button class="btn btn-primary form-control-sm" id="saveCookies">ACEITAR</button>
-                    <button class="btn btn-primary form-control-sm" id="rejCookies">REJEITAR</button>
+                    <button onclick="aceitar()" class="btn btn-primary form-control-sm" id="saveCookies">ACEITAR</button>
+                    <button onclick="rejeitar()" class="btn btn-primary form-control-sm" id="rejCookies">REJEITAR</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>
